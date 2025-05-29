@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
     <!-- Plausible Analytics -->
     <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
@@ -28,7 +28,7 @@
     </script>
 
     <style>
-        /* Reset & basics */
+        /* Reset & layout */
         body, html {
             margin: 0;
             padding: 0;
@@ -161,10 +161,11 @@
 
 <body>
 <header>
-    <a href="#projects">Projects</a>
-    <a href="#music">Music</a>
-    <a href="#code">Code</a>
-    <a href="#links">Links</a>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="music.html">Music</a>
+    <a href="code.html">Code</a>
+    <a href="links.html">Links</a>
 </header>
 
 <div id="canvas-wrapper">
@@ -218,8 +219,9 @@
             if (innerColorCycle > p.TWO_PI) innerColorCycle = 0;
 
             let rC, gC, bC;
+            const phase = innerColorCycle;
+
             if (isBlackTheme) {
-                const phase = innerColorCycle;
                 if (phase < p.TWO_PI / 3) {
                     const t = phase / (p.TWO_PI / 3);
                     rC = 255;
@@ -237,7 +239,6 @@
                     bC = 255;
                 }
             } else {
-                const phase = innerColorCycle;
                 const yellow = { r: 255, g: 248, b: 34 };
                 const blue = { r: 34, g: 136, b: 255 };
                 if (phase < p.TWO_PI / 3) {
@@ -270,6 +271,5 @@
         }
     }, canvasContainer);
 </script>
-
 </body>
 </html>
