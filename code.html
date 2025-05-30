@@ -6,7 +6,6 @@
     <title>Miles Waite - Code</title>
 
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
-
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
     <!-- Plausible Analytics -->
@@ -22,17 +21,19 @@
     </script>
 
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #d3d3d3;
             color: var(--text-color, #000);
             transition: background-color 1.5s ease, color 1.5s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         header, footer {
@@ -49,6 +50,7 @@
             box-sizing: border-box;
             font-family: 'Manrope', sans-serif;
             text-align: center;
+            margin: 0 auto;
         }
 
         header a, footer a {
@@ -95,6 +97,8 @@
             box-sizing: border-box;
             font-size: 1.1rem;
             line-height: 1.6;
+            flex: 1;
+            margin: 0 auto;
         }
 
         @media (max-width: 600px) {
@@ -107,16 +111,32 @@
     </style>
 </head>
 <body>
-<div id="header"></div>
+
+<header>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="music.html">Music</a>
+    <a href="code.html">Code</a>
+</header>
 
 <main>
     <h1>Code</h1>
-    <p>Welcome to my coding projects and experiments. Find snippets, repos, and development notes here.</p>
-    <!-- Add your code content here -->
+    <p>Dive into the code powering my experiments, tools, and ideas.</p>
+    <!-- Add your code-related content here -->
 </main>
 
-<div id="footer"></div>
+<footer>
+    <a href="https://github.com/mileswaite" target="_blank" aria-label="GitHub">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" />
+    </a>
+    <a href="https://www.linkedin.com/in/mileswaite" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://www.instagram.com/mileswaite" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
+    </a>
+</footer>
 
-<script src="js/include-header-footer.js"></script>
 </body>
 </html>
+
