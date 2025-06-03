@@ -8,14 +8,11 @@
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
-    <!-- Plausible Analytics -->
     <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
-
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4B9899H34T');
     </script>
@@ -91,7 +88,7 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1100px;
             padding: 2rem 1rem;
             width: 100%;
             box-sizing: border-box;
@@ -99,6 +96,40 @@
             line-height: 1.6;
             flex: 1;
             margin: 0 auto;
+        }
+
+        .code-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .code-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .code-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .code-card h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .code-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
         }
 
         @media (max-width: 600px) {
@@ -121,8 +152,34 @@
 
 <main>
     <h1>Code</h1>
-    <p>Dive into the code powering my experiments, tools, and ideas.</p>
-    <!-- Add your code-related content here -->
+    <p>Browse code experiments, utilities, and generative projects.</p>
+
+    <div class="code-section">
+        <a href="#" class="code-card">
+            <h2>Fractal Tree Generator</h2>
+            <p>Recursive tree with tunable branching angles and colors in p5.js.</p>
+        </a>
+        <a href="#" class="code-card">
+            <h2>ChatGPT in M4L</h2>
+            <p>JS-based interface to OpenAI's API from inside Max for Live.</p>
+        </a>
+        <a href="#" class="code-card">
+            <h2>Chord Mapper</h2>
+            <p>Displays voice-leading and inversion options for jazz progressions.</p>
+        </a>
+        <a href="#" class="code-card">
+            <h2>Step Tracker Web App</h2>
+            <p>Track and visualize walking streaks with calorie burn data.</p>
+        </a>
+        <a href="#" class="code-card">
+            <h2>Kandinsky Canvas</h2>
+            <p>Interactive generative art sketch in the style of Kandinsky.</p>
+        </a>
+        <a href="#" class="code-card">
+            <h2>Boids Simulator</h2>
+            <p>Flocking behavior visualizer with obstacle avoidance in JavaScript.</p>
+        </a>
+    </div>
 </main>
 
 <footer>
@@ -139,4 +196,3 @@
 
 </body>
 </html>
-

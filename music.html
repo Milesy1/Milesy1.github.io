@@ -15,7 +15,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4B9899H34T');
     </script>
@@ -91,7 +91,7 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1100px;
             padding: 2rem 1rem;
             width: 100%;
             box-sizing: border-box;
@@ -99,6 +99,40 @@
             line-height: 1.6;
             flex: 1;
             margin: 0 auto;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .music-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .music-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .music-card h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .music-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
         }
 
         @media (max-width: 600px) {
@@ -121,8 +155,34 @@
 
 <main>
     <h1>Music</h1>
-    <p>Listen to my compositions, sound experiments, and electronic creations.</p>
-    <!-- Add your music content here -->
+    <p>Listen to my ambient compositions, experimental projects, and sound design work.</p>
+
+    <div class="music-grid">
+        <a href="#" class="music-card">
+            <h2>Sleep Cycles</h2>
+            <p>Soft ambient tones inspired by circadian rhythms and dream states.</p>
+        </a>
+        <a href="#" class="music-card">
+            <h2>Frequencies in Fog</h2>
+            <p>Lo-fi textures and eerie loops designed for late-night headphone sessions.</p>
+        </a>
+        <a href="#" class="music-card">
+            <h2>Granular Drift</h2>
+            <p>A drifting exploration of granular textures and glitchy decay.</p>
+        </a>
+        <a href="#" class="music-card">
+            <h2>Botanica</h2>
+            <p>Generative audio influenced by plant rhythms and modular synthesis.</p>
+        </a>
+        <a href="#" class="music-card">
+            <h2>Water Memory</h2>
+            <p>Piano and tape loops soaked in delay and aquatic resonance.</p>
+        </a>
+        <a href="#" class="music-card">
+            <h2>Obsidian</h2>
+            <p>Darker, more experimental work made with Max for Live and resampled noise.</p>
+        </a>
+    </div>
 </main>
 
 <footer>
