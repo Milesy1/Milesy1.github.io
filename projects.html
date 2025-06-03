@@ -15,7 +15,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-4B9899H34T');
     </script>
@@ -91,7 +91,7 @@
         }
 
         main {
-            max-width: 900px;
+            max-width: 1100px;
             padding: 2rem 1rem;
             width: 100%;
             box-sizing: border-box;
@@ -99,6 +99,40 @@
             line-height: 1.6;
             flex: 1;
             margin: 0 auto;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            margin: 0;
+            font-size: 1rem;
+            color: #333;
         }
 
         @media (max-width: 600px) {
@@ -122,7 +156,57 @@
 <main>
     <h1>Projects</h1>
     <p>Explore my latest projects, coding experiments, and creative work.</p>
-    <!-- Add your projects content here -->
+
+    <div class="project-grid">
+        <a href="#" class="project-card">
+            <h2>Typatone-Inspired Sound Toy</h2>
+            <p>Ambient typing interface that transforms keystrokes into generative music.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Particle Playground</h2>
+            <p>Keystrokes emit particles that pulse, swirl, and bloom into a reactive sound nebula.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Chaos Visualizer</h2>
+            <p>A visual exploration of fractals and chaotic attractors in p5.js.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Murmuration Flocking Sim</h2>
+            <p>Simulates starling behavior with emergent group motion using boids.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Max for Live GPT Interface</h2>
+            <p>Control ChatGPT directly inside Ableton Live using a custom M4L device.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Endur Analytics Dashboard</h2>
+            <p>Clean, interactive dashboards for energy trading data using Endur API.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Ultrawalker Tracker</h2>
+            <p>Step, distance, and calorie tracking tool for long-haul walking streaks.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Calorie Deficit Planner</h2>
+            <p>Estimates weight loss pace based on walking activity and daily intake.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Modular Audio Toolkit</h2>
+            <p>Custom-built sound design modules using Max for Live and JavaScript.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Kandinsky Generator</h2>
+            <p>Generative Kandinsky-style art made with p5.js and math-driven forms.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Spotify Uploader Tool</h2>
+            <p>Simple interface for uploading ambient works to Spotify via DistroKid.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Music Theory Mapper</h2>
+            <p>Visualizes chord progressions and inversions for composition.</p>
+        </a>
+    </div>
 </main>
 
 <footer>
