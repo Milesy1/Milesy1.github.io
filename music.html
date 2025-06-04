@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Projects</title>
+    <title>Miles Waite - Music</title>
 
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
@@ -53,7 +53,6 @@
             margin: 0 auto;
         }
 
-        /* New style for the home button with .. */
         .home-button {
             font-weight: 900;
             font-size: 1.5rem;
@@ -71,7 +70,7 @@
         }
 
         .home-button:hover {
-            color: #0070f3; /* brand highlight color */
+            color: #0070f3;
         }
 
         header a:not(.home-button) {
@@ -100,6 +99,36 @@
             transform-origin: left;
         }
 
+        main {
+            max-width: 1100px;
+            padding: 2rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        section h2 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
         footer a img {
             width: 24px;
             height: 24px;
@@ -111,49 +140,14 @@
             transform: scale(1.2);
         }
 
-        main {
-            max-width: 1100px;
-            padding: 2rem 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            flex: 1;
-            margin: 0 auto;
+        main h1 {
+            text-align: center;
+            grid-column: 1 / -1;
+            margin-top: 0;
         }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.25rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card h2 {
-            margin: 0 0 0.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .project-card p {
-            margin: 0;
-            font-size: 1rem;
-            color: #333;
+        section h2 {
+            text-align: center;
         }
 
         @media (max-width: 600px) {
@@ -170,64 +164,27 @@
 <header>
     <a href="index.html" aria-label="Home" class="home-button">..</a>
     <a href="projects.html">Projects</a>
-    <a href="music.html">Music</a>
+    <a href="music.html" aria-current="page">Music</a>
     <a href="code.html">Code</a>
 </header>
 
 <main>
-    <h1>Projects</h1>
-    <p>Explore my latest projects, coding experiments, and creative work.</p>
+    <h1>Music</h1>
 
-    <div class="project-grid">
-        <a href="#" class="project-card">
-            <h2>Typatone-Inspired Sound Toy</h2>
-            <p>Ambient typing interface that transforms keystrokes into generative music.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Particle Playground</h2>
-            <p>Keystrokes emit particles that pulse, swirl, and bloom into a reactive sound nebula.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Chaos Visualizer</h2>
-            <p>A visual exploration of fractals and chaotic attractors in p5.js.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Murmuration Flocking Sim</h2>
-            <p>Simulates starling behavior with emergent group motion using boids.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Max for Live GPT Interface</h2>
-            <p>Control ChatGPT directly inside Ableton Live using a custom M4L device.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Endur Analytics Dashboard</h2>
-            <p>Clean, interactive dashboards for energy trading data using Endur API.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Ultrawalker Tracker</h2>
-            <p>Step, distance, and calorie tracking tool for long-haul walking streaks.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Calorie Deficit Planner</h2>
-            <p>Estimates weight loss pace based on walking activity and daily intake.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Modular Audio Toolkit</h2>
-            <p>Custom-built sound design modules using Max for Live and JavaScript.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Kandinsky Generator</h2>
-            <p>Generative Kandinsky-style art made with p5.js and math-driven forms.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Spotify Uploader Tool</h2>
-            <p>Simple interface for uploading ambient works to Spotify via DistroKid.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Music Theory Mapper</h2>
-            <p>Visualizes chord progressions and inversions for composition.</p>
-        </a>
-    </div>
+    <section>
+        <h2>Sunnk-Inspired Work</h2>
+        <p>Explorations in glitchy, melodic sound design drawing inspiration from artists like Sunnk. Expect broken rhythms, warm chaos, and granular magic.</p>
+    </section>
+
+    <section>
+        <h2>Max for Live Devices</h2>
+        <p>Hand-crafted utilities and experiments built inside Max for Live — sequencers, modulators, and experimental AI integrations.</p>
+    </section>
+
+    <section>
+        <h2>Particle Playground</h2>
+        <p>My upcoming generative audio-visual project — each keystroke generates particles and ambient notes, creating a live-played visual composition.</p>
+    </section>
 </main>
 
 <footer>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Code Projects</title>
+    <title>Miles Waite - Code</title>
 
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
@@ -15,45 +15,67 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-4B9899H34T');
     </script>
 
     <style>
+        :root {
+            --bg-color: #d3d3d3;
+            --text-color: #000;
+            --section-bg: #fff;
+            --section-shadow: rgba(0, 0, 0, 0.1);
+            --section-hover-shadow: rgba(0, 0, 0, 0.15);
+        }
+
         html, body {
             margin: 0;
             padding: 0;
             min-height: 100vh;
-        }
-
-        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Manrope', sans-serif;
+            transition: background-color 1.5s ease, color 1.5s ease;
             display: flex;
             flex-direction: column;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #d3d3d3;
-            color: var(--text-color, #000);
-            transition: background-color 1.5s ease, color 1.5s ease;
         }
 
         header, footer {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
             display: flex;
             justify-content: center;
             gap: 3rem;
-            padding: 1.5rem 0;
             font-weight: 700;
             font-size: 1.25rem;
             user-select: none;
             letter-spacing: 0.08em;
-            width: 100%;
-            max-width: 1000px;
-            box-sizing: border-box;
-            font-family: 'Manrope', sans-serif;
-            text-align: center;
-            margin: 0 auto;
         }
 
-        header a, footer a {
+        .home-button {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.25em;
+            padding: 0 0.5rem;
+            user-select: none;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .home-button:hover {
+            color: #0070f3;
+        }
+
+        header a:not(.home-button) {
             cursor: pointer;
             position: relative;
             padding-bottom: 4px;
@@ -61,7 +83,7 @@
             color: inherit;
         }
 
-        header a::after {
+        header a:not(.home-button)::after {
             content: '';
             position: absolute;
             left: 0;
@@ -74,9 +96,65 @@
             transition: transform 0.3s ease;
         }
 
-        header a:hover::after {
+        header a:not(.home-button):hover::after,
+        header a[aria-current="page"]::after {
             transform: scaleX(1);
             transform-origin: left;
+        }
+
+        main {
+            max-width: 1100px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            flex: 1;
+        }
+
+        main h1 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 0.1em;
+            user-select: none;
+        }
+
+        section {
+            background: var(--section-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px var(--section-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            user-select: none;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px var(--section-hover-shadow);
+        }
+
+        section h2 {
+            margin: 0 0 0.8rem 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        section p {
+            margin: 0;
+            line-height: 1.5;
+            text-align: center;
+            color: #333;
         }
 
         footer a img {
@@ -90,55 +168,10 @@
             transform: scale(1.2);
         }
 
-        main {
-            max-width: 1100px;
-            padding: 2rem 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            flex: 1;
-            margin: 0 auto;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.25rem;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-card h2 {
-            margin: 0 0 0.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .project-card p {
-            margin: 0;
-            font-size: 1rem;
-            color: #333;
-        }
-
         @media (max-width: 600px) {
             header, footer {
                 gap: 1.5rem;
-                padding: 1rem 0;
+                padding: 1rem;
                 font-size: 1rem;
             }
         }
@@ -147,50 +180,44 @@
 <body>
 
 <header>
-    <a href="index.html">..</a>
+    <a href="index.html" aria-label="Home" class="home-button">..</a>
     <a href="projects.html">Projects</a>
     <a href="music.html">Music</a>
-    <a href="code.html">Code</a>
+    <a href="code.html" aria-current="page">Code</a>
 </header>
 
 <main>
-    <h1>Code Projects</h1>
-    <p>A showcase of my coding experiments, tools, and open source work.</p>
+    <h1>Code</h1>
 
-    <div class="project-grid">
-        <a href="#" class="project-card">
-            <h2>Max for Live GPT Interface</h2>
-            <p>Control ChatGPT directly inside Ableton Live using a custom M4L device.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Endur Analytics Dashboard</h2>
-            <p>Clean, interactive dashboards for energy trading data using Endur API.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Ultrawalker Tracker</h2>
-            <p>Step, distance, and calorie tracking tool for long-haul walking streaks.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Calorie Deficit Planner</h2>
-            <p>Estimates weight loss pace based on walking activity and daily intake.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Modular Audio Toolkit</h2>
-            <p>Custom-built sound design modules using Max for Live and JavaScript.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Kandinsky Generator</h2>
-            <p>Generative Kandinsky-style art made with p5.js and math-driven forms.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Spotify Uploader Tool</h2>
-            <p>Simple interface for uploading ambient works to Spotify via DistroKid.</p>
-        </a>
-        <a href="#" class="project-card">
-            <h2>Music Theory Mapper</h2>
-            <p>Visualizes chord progressions and inversions for composition.</p>
-        </a>
-    </div>
+    <section>
+        <h2>Modular Max for Live</h2>
+        <p>Building flexible Max for Live devices that empower music creation and interactive performance.</p>
+    </section>
+
+    <section>
+        <h2>Generative Art</h2>
+        <p>Exploring visual creativity through algorithmic art using p5.js and other generative tools.</p>
+    </section>
+
+    <section>
+        <h2>API Integrations</h2>
+        <p>Connecting software with powerful APIs like OpenAI to extend functionality and intelligence.</p>
+    </section>
+
+    <section>
+        <h2>Utilities & Tools</h2>
+        <p>Crafting handy scripts and utilities to streamline workflows and experiment with new ideas.</p>
+    </section>
+
+    <section>
+        <h2>Experimental Projects</h2>
+        <p>Prototyping innovative concepts at the intersection of music, code, and interactive media.</p>
+    </section>
+
+    <section>
+        <h2>Open Source Contributions</h2>
+        <p>Sharing code and collaborating on open projects to support the creative developer community.</p>
+    </section>
 </main>
 
 <footer>
