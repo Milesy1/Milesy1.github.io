@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Code</title>
+    <title>Miles Waite - Code Projects</title>
 
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
+    <!-- Plausible Analytics -->
     <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -98,14 +101,14 @@
             margin: 0 auto;
         }
 
-        .code-section {
+        .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
-        .code-card {
+        .project-card {
             background: white;
             border-radius: 12px;
             padding: 1.25rem;
@@ -115,18 +118,18 @@
             color: inherit;
         }
 
-        .code-card:hover {
+        .project-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
         }
 
-        .code-card h2 {
+        .project-card h2 {
             margin: 0 0 0.5rem;
             font-size: 1.2rem;
             font-weight: 700;
         }
 
-        .code-card p {
+        .project-card p {
             margin: 0;
             font-size: 1rem;
             color: #333;
@@ -144,40 +147,48 @@
 <body>
 
 <header>
-    <a href="index.html">Home</a>
+    <a href="index.html">..</a>
     <a href="projects.html">Projects</a>
     <a href="music.html">Music</a>
     <a href="code.html">Code</a>
 </header>
 
 <main>
-    <h1>Code</h1>
-    <p>Browse code experiments, utilities, and generative projects.</p>
+    <h1>Code Projects</h1>
+    <p>A showcase of my coding experiments, tools, and open source work.</p>
 
-    <div class="code-section">
-        <a href="#" class="code-card">
-            <h2>Fractal Tree Generator</h2>
-            <p>Recursive tree with tunable branching angles and colors in p5.js.</p>
+    <div class="project-grid">
+        <a href="#" class="project-card">
+            <h2>Max for Live GPT Interface</h2>
+            <p>Control ChatGPT directly inside Ableton Live using a custom M4L device.</p>
         </a>
-        <a href="#" class="code-card">
-            <h2>ChatGPT in M4L</h2>
-            <p>JS-based interface to OpenAI's API from inside Max for Live.</p>
+        <a href="#" class="project-card">
+            <h2>Endur Analytics Dashboard</h2>
+            <p>Clean, interactive dashboards for energy trading data using Endur API.</p>
         </a>
-        <a href="#" class="code-card">
-            <h2>Chord Mapper</h2>
-            <p>Displays voice-leading and inversion options for jazz progressions.</p>
+        <a href="#" class="project-card">
+            <h2>Ultrawalker Tracker</h2>
+            <p>Step, distance, and calorie tracking tool for long-haul walking streaks.</p>
         </a>
-        <a href="#" class="code-card">
-            <h2>Step Tracker Web App</h2>
-            <p>Track and visualize walking streaks with calorie burn data.</p>
+        <a href="#" class="project-card">
+            <h2>Calorie Deficit Planner</h2>
+            <p>Estimates weight loss pace based on walking activity and daily intake.</p>
         </a>
-        <a href="#" class="code-card">
-            <h2>Kandinsky Canvas</h2>
-            <p>Interactive generative art sketch in the style of Kandinsky.</p>
+        <a href="#" class="project-card">
+            <h2>Modular Audio Toolkit</h2>
+            <p>Custom-built sound design modules using Max for Live and JavaScript.</p>
         </a>
-        <a href="#" class="code-card">
-            <h2>Boids Simulator</h2>
-            <p>Flocking behavior visualizer with obstacle avoidance in JavaScript.</p>
+        <a href="#" class="project-card">
+            <h2>Kandinsky Generator</h2>
+            <p>Generative Kandinsky-style art made with p5.js and math-driven forms.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Spotify Uploader Tool</h2>
+            <p>Simple interface for uploading ambient works to Spotify via DistroKid.</p>
+        </a>
+        <a href="#" class="project-card">
+            <h2>Music Theory Mapper</h2>
+            <p>Visualizes chord progressions and inversions for composition.</p>
         </a>
     </div>
 </main>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +54,28 @@
             margin: 0 auto;
         }
 
-        header a, footer a {
+        /* Home button style */
+        .home-button {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: 0.25em;
+            padding: 0 0.5rem;
+            user-select: none;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .home-button:hover {
+            color: #0070f3;
+        }
+
+        header a:not(.home-button) {
             cursor: pointer;
             position: relative;
             padding-bottom: 4px;
@@ -61,7 +83,7 @@
             color: inherit;
         }
 
-        header a::after {
+        header a:not(.home-button)::after {
             content: '';
             position: absolute;
             left: 0;
@@ -74,7 +96,7 @@
             transition: transform 0.3s ease;
         }
 
-        header a:hover::after {
+        header a:not(.home-button):hover::after {
             transform: scaleX(1);
             transform-origin: left;
         }
@@ -147,8 +169,8 @@
 <body>
 
 <header>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="index.html" aria-label="Home" class="home-button">..</a>
+    <a href="projects.html" aria-current="page">Projects</a>
     <a href="music.html">Music</a>
     <a href="code.html">Code</a>
 </header>
@@ -158,6 +180,7 @@
     <p>Explore my latest projects, coding experiments, and creative work.</p>
 
     <div class="project-grid">
+        <!-- You can update these links and descriptions to your actual projects -->
         <a href="#" class="project-card">
             <h2>Typatone-Inspired Sound Toy</h2>
             <p>Ambient typing interface that transforms keystrokes into generative music.</p>
@@ -179,15 +202,15 @@
             <p>Control ChatGPT directly inside Ableton Live using a custom M4L device.</p>
         </a>
         <a href="#" class="project-card">
-            <h2>Risk Management Analytics Dashboard</h2>
-            <p>Clean, interactive dashboards for Risk analysis.</p>
+            <h2>Endur Analytics Dashboard</h2>
+            <p>Clean, interactive dashboards for energy trading data using Endur API.</p>
         </a>
         <a href="#" class="project-card">
             <h2>Ultrawalker Tracker</h2>
             <p>Step, distance, and calorie tracking tool for long-haul walking streaks.</p>
         </a>
         <a href="#" class="project-card">
-            <h2>Step Counter</h2>
+            <h2>Calorie Deficit Planner</h2>
             <p>Estimates weight loss pace based on walking activity and daily intake.</p>
         </a>
         <a href="#" class="project-card">
