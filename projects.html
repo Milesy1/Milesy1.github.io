@@ -167,7 +167,21 @@
 
 <main>
     <h1>Projects</h1>
-    <div id="projects-container"></div>
+
+    <section>
+        <h2>Modular Max for Live System</h2>
+        <p>A flexible modular system that lets users build and connect Max for Live devices for music production and experimental workflows.</p>
+    </section>
+
+    <section>
+        <h2>Typatone-Inspired Visuals</h2>
+        <p>An ambient typing-to-music app where each keystroke triggers particles, sounds, and light, creating a flowing nebula of generative art.</p>
+    </section>
+
+    <section>
+        <h2>Risk Management Tools</h2>
+        <p>Custom-built software for energy trading risk analysis, blending finance, coding, and user-friendly dashboards.</p>
+    </section>
 </main>
 
 <footer>
@@ -182,26 +196,6 @@
     </a>
 </footer>
 
-<script>
-    fetch('projects.json')
-        .then(res => res.json())
-        .then(projects => {
-            const container = document.getElementById('projects-container');
-            projects.forEach(({ title, description }) => {
-                const section = document.createElement('section');
-                section.innerHTML = \`
-                    <h2>\${title}</h2>
-                    <p>\${description}</p>
-                \`;
-                container.appendChild(section);
-            });
-        })
-        .catch(err => {
-            console.error('Error loading projects:', err);
-        });
-</script>
-
 </body>
 </html>
-
 
