@@ -167,21 +167,7 @@
 
 <main>
     <h1>Projects</h1>
-
-    <section>
-        <h2>Forms</h2>
-        <p>Lorenz Systems & Cubes</p>
-    </section>
-
-    <section>
-        <h2>Typatone</h2>
-        <p>Ambient Inspired Visuals</p>
-    </section>
-
-    <section>
-        <h2>Max for Live</h2>
-        <p>Max for Live devices for music production and experimental workflows</p>
-    </section>
+    <div id="projects-container"></div>
 </main>
 
 <footer>
@@ -196,6 +182,26 @@
     </a>
 </footer>
 
+<script>
+    fetch('projects.json')
+        .then(res => res.json())
+        .then(projects => {
+            const container = document.getElementById('projects-container');
+            projects.forEach(({ title, description }) => {
+                const section = document.createElement('section');
+                section.innerHTML = \`
+                    <h2>\${title}</h2>
+                    <p>\${description}</p>
+                \`;
+                container.appendChild(section);
+            });
+        })
+        .catch(err => {
+            console.error('Error loading projects:', err);
+        });
+</script>
+
 </body>
 </html>
+
 
