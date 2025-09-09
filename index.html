@@ -226,6 +226,12 @@
             p.strokeWeight(2);
         };
 
+        p.keyPressed = function () {
+            if (p.key === 's' || p.key === 'S') {
+                p.saveCanvas('screenshot', 'png'); // saves screenshot.png
+            }
+        };
+
         p.draw = function () {
             p.background(getComputedStyle(document.body).getPropertyValue('--bg-color').trim());
 
