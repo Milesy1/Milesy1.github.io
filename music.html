@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Music</title>
+    <title>Miles Waite - &</title>
 
     <link rel="icon" href="images.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
@@ -193,21 +193,18 @@
         <h2>Particles</h2>
         <p>My upcoming generative audio-visual project — each keystroke generates particles and ambient notes, creating a live-played visual composition.</p>
     </section>
+
 </main>
 
-<footer>
-    <a href="mailto:lorenzsys@protonmail.com" aria-label="Email">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" />
-    </a>
-    <a href="https://github.com/Milesy1" target="_blank" aria-label="GitHub">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" />
-    </a>
-    <a href="https://www.instagram.com/miles_waite_td" target="_blank" aria-label="Instagram">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
-    </a>
-</footer>
+<div id="footer"></div>
 
-
+<script>
+    async function loadFooter() {
+        document.getElementById('footer').innerHTML =
+            await (await fetch('footer.html')).text();
+    }
+    loadFooter();
+</script>
 
 
 </body>
