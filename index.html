@@ -178,11 +178,20 @@
 </head>
 
 <body>
-<header>
-    <a href="projects.html">Projects</a>
-    <a href="music.html">Music</a>
-    <a href="code.html">Code</a>
-</header>
+<!-- Header placeholder -->
+<div id="header"></div>
+
+<script>
+    async function loadHeader() {
+        const headerUrl = 'header.html?cache=' + new Date().getTime();
+
+        const headerResp = await fetch(headerUrl);
+        document.getElementById('header').innerHTML = await headerResp.text();
+    }
+
+    loadHeader();
+</script>
+
 
 <div id="canvas-wrapper">
     <div id="canvas-container">

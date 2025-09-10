@@ -161,12 +161,20 @@
 </head>
 <body>
 
-<header>
-    <a href="index.html" aria-label="Home" class="home-button">..</a>
-    <a href="projects.html">Projects</a>
-    <a href="music.html" aria-current="page">Music</a>
-    <a href="code.html">Code</a>
-</header>
+<!-- Header placeholder -->
+<div id="header"></div>
+
+<script>
+    async function loadHeader() {
+        const headerUrl = 'header.html?cache=' + new Date().getTime();
+
+        const headerResp = await fetch(headerUrl);
+        document.getElementById('header').innerHTML = await headerResp.text();
+    }
+
+    loadHeader();
+</script>
+
 
 <main>
     <h1>Music</h1>

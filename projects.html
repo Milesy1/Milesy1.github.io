@@ -158,12 +158,50 @@
 </head>
 <body>
 
-<header>
-    <a href="index.html" aria-label="Home" class="home-button">..</a>
-    <a href="projects.html" aria-current="page">Projects</a>
-    <a href="music.html">Music</a>
-    <a href="code.html">Code</a>
-</header>
+}
+
+footer a img:hover {
+transform: scale(1.2);
+}
+
+main h1 {
+text-align: center;
+grid-column: 1 / -1;
+margin-top: 0;
+}
+
+section h2 {
+text-align: center;
+}
+
+@media (max-width: 600px) {
+header, footer {
+gap: 1.5rem;
+padding: 1rem 0;
+font-size: 1rem;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Header placeholder -->
+<div id="header"></div>
+
+<script>
+    async function loadHeader() {
+        const headerUrl = 'header.html?cache=' + new Date().getTime();
+
+        const headerResp = await fetch(headerUrl);
+        document.getElementById('header').innerHTML = await headerResp.text();
+    }
+
+    loadHeader();
+</script>
+
+
+<main>
+    <h1>Music</h1>
 
 <main>
     <h1>TouchDesigner</h1>
