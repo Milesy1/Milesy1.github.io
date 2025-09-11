@@ -8,167 +8,29 @@
     <link rel="icon" href="images.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
-    <!-- Plausible Analytics -->
+    <!-- Analytics -->
     <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
-
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-4B9899H34T');
     </script>
 
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #d3d3d3;
-            color: var(--text-color, #000);
-            transition: background-color 1.5s ease, color 1.5s ease;
-        }
-
-        header, footer {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            padding: 1.5rem 0;
-            font-weight: 700;
-            font-size: 1.25rem;
-            user-select: none;
-            letter-spacing: 0.08em;
-            width: 100%;
-            max-width: 1000px;
-            box-sizing: border-box;
-            font-family: 'Manrope', sans-serif;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        .home-button {
-            font-weight: 900;
-            font-size: 1.5rem;
-            letter-spacing: 0.25em;
-            padding: 0 0.5rem;
-            user-select: none;
-            cursor: pointer;
-            color: inherit;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 2.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .home-button:hover {
-            color: #0070f3;
-        }
-
-        header a:not(.home-button) {
-            cursor: pointer;
-            position: relative;
-            padding-bottom: 4px;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        header a:not(.home-button)::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 3px;
-            background: currentColor;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
-
-        header a:not(.home-button):hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        main {
-            max-width: 1100px;
-            padding: 2rem 1rem;
-            width: 100%;
-            box-sizing: border-box;
-            flex: 1;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        section {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        section h2 {
-            margin-top: 0;
-            font-size: 1.25rem;
-            text-align: center;
-        }
-
-        footer a img {
-            width: 24px;
-            height: 24px;
-            filter: invert(0);
-            transition: transform 0.2s ease;
-        }
-
-        footer a img:hover {
-            transform: scale(1.2);
-        }
-
-        main h1 {
-            text-align: center;
-            grid-column: 1 / -1;
-            margin-top: 0;
-        }
-
-        @media (max-width: 600px) {
-            header, footer {
-                gap: 1.5rem;
-                padding: 1rem 0;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
 </head>
 <body>
 
-<!-- Header placeholder -->
 <div id="header"></div>
-
 <script>
     async function loadHeader() {
         const headerUrl = 'header.html?cache=' + new Date().getTime();
-
         const headerResp = await fetch(headerUrl);
         document.getElementById('header').innerHTML = await headerResp.text();
     }
-
     loadHeader();
 </script>
 
@@ -191,21 +53,14 @@
     </section>
 </main>
 
-<footer>
-    <a href="mailto:lorenzsys@protonmail.com" aria-label="Email">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email" />
-    </a>
-    <a href="https://github.com/Milesy1" target="_blank" aria-label="GitHub">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" alt="GitHub" />
-    </a>
-    <a href="https://www.instagram.com/miles_waite_td" target="_blank" aria-label="Instagram">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
-    </a>
-</footer>
-
-
-
+<div id="footer"></div>
+<script>
+    async function loadFooter() {
+        document.getElementById('footer').innerHTML =
+            await (await fetch('footer.html')).text();
+    }
+    loadFooter();
+</script>
 
 </body>
 </html>
-

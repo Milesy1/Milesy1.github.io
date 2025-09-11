@@ -1,0 +1,196 @@
+/* ---------------------------- */
+/* Reset & Body Setup           */
+/* ---------------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    background-color: #d3d3d3;
+    color: var(--text-color, #000);
+    transition: background-color 1.5s ease, color 1.5s ease;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* ---------------------------- */
+/* Theme Variables              */
+/* ---------------------------- */
+:root {
+    --bg-black: #000;
+    --bg-white: #fff;
+    --text-white: #fff;
+    --text-black: #000;
+    --yellow-bright: #fff822;
+    --blue-bright: #2288ff;
+    --red-bright: #ff2222;
+}
+
+body.black-theme {
+    --bg-color: var(--bg-black);
+    --text-color: var(--text-white);
+}
+
+body.white-theme {
+    --bg-color: var(--bg-white);
+    --text-color: var(--text-black);
+}
+
+/* ---------------------------- */
+/* Stardos Stencil Font          */
+/* ---------------------------- */
+@font-face {
+    font-family: 'StardosStencil';
+    src: url('fonts/StardosStencil-Regular.woff2') format('woff2'),
+         url('fonts/StardosStencil-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------------------------- */
+/* Header                       */
+/* ---------------------------- */
+header {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 1.5rem 0;
+    font-family: 'StardosStencil', sans-serif;
+    font-weight: normal;
+    font-size: 1.5rem; /* slightly larger for impact */
+    letter-spacing: 0.1em;
+    user-select: none;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header a {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 4px;
+    text-decoration: none;
+    color: inherit;
+}
+
+header a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header a[aria-current="page"] {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* ---------------------------- */
+/* Canvas Wrapper & Container   */
+/* ---------------------------- */
+#canvas-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#canvas-container {
+    position: relative;
+    width: 540px;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#square-bg {
+    width: 378px;
+    height: 378px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+canvas {
+    z-index: 1;
+    display: block;
+    outline: none;
+}
+
+/* ---------------------------- */
+/* Footer                       */
+/* ---------------------------- */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0 1.5rem;
+    font-family: 'StardosStencil', sans-serif;
+    font-size: 1rem;
+}
+
+footer a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(0);
+    transition: transform 0.2s ease;
+}
+
+footer a img:hover {
+    transform: scale(1.2);
+}
+
+/* ---------------------------- */
+/* Main Heading                 */
+/* ---------------------------- */
+.main-heading {
+    font-family: 'StardosStencil', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------- */
+/* Responsive Adjustments       */
+/* ---------------------------- */
+@media (max-width: 600px) {
+    header {
+        gap: 1.5rem;
+        padding: 1rem 0;
+        font-size: 1.25rem;
+    }
+
+    #canvas-container {
+        width: 90vw;
+        height: 90vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    #square-bg {
+        width: 70vw;
+        height: 70vw;
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+}
