@@ -72,10 +72,13 @@ header {
 header a {
     cursor: pointer;
     position: relative;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
     text-decoration: none;
-    color: inherit;
+    color: #000000;
+    font-family: "Scto Grotesk A", Arial, sans-serif;
+    font-size: 14px;
 }
+
 
 header a::after {
     content: '';
