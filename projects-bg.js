@@ -8,7 +8,7 @@ function setup() {
   canvas.style('left', '0');
   canvas.style('width', '100vw');          // full viewport width
   canvas.style('height', '100vh');         // full viewport height
-  canvas.style('z-index', '-1');           // behind everything
+  canvas.style('z-index', '-1');           // behind content
   canvas.style('pointer-events', 'none');  // clicks pass through
   noFill();
   stroke(125, 50);

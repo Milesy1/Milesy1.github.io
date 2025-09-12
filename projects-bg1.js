@@ -1,26 +1,34 @@
-function setup() {
-    createCanvas(windowWidth, windowHeight);  // full screen
-    noFill();
-    stroke(0, 20);
-    frameRate(60);
+let t = 0;
 
-    // Put canvas behind everything
-    let c = document.getElementsByTagName('canvas')[0];
-    c.style.position = 'fixed';
-    c.style.top = '0';
-    c.style.left = '0';
-    c.style.zIndex = '-1';
+function setup() {
+    let canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0, 0);
+    canvas.style('position', 'fixed');   // stay behind content
+    canvas.style('top', '0');
+    canvas.style('left', '0');
+    canvas.style('width', '100vw');
+    canvas.style('height', '100vh');
+    canvas.style('z-index', '-1');       // behind everything
+    canvas.style('pointer-events', 'none'); // clicks pass through
+    noFill();
+    stroke(0, 20);                       // soft black trails
+    frameRate(60);
 }
 
 function draw() {
-    background(250, 250, 250, 50); // semi-transparent for trailing effect
+    // semi-transparent grey overlay for trail effect
+    background(211, 211, 211, 50);
 
-    let t = float(frameCount);
-    translate(width / 2 + t / 2, height / 2);
+    push();
+    translate(width / 2 + sin(t / 100) * 50, height / 2 + cos(t / 100) * 50);
     rotate(t / 150);
-    ellipse(0, 0, sin(t / 100) * t / 2, cos(t / 100) * t / 6);
+    ellipse(0, 0, abs(sin(t / 100) * 200) + 100, abs(cos(t / 100) * 100) + 50);
+    pop();
+
+    t += 1;
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
+

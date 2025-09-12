@@ -1,116 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Miles Waite - About</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miles Waite - Projects</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="images.png" type="image/png" />
+    <link rel="icon" href="images.png" type="image/png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- Analytics -->
-  <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="music.css" />
+    <!-- p5.js for background -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      font-family: 'Manrope', sans-serif;
-      background-color: #d3d3d3;
-      color: var(--text-color, #000);
-    }
-
-    main {
-      flex: 1;
-      width: 90%;
-      max-width: 1000px;
-      margin: 2rem auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    main h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    section h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-
-    section p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    @media (max-width: 600px) {
-      main {
-        width: 95%;
-        gap: 1.5rem;
-      }
-      main h1 {
-        font-size: 2rem;
-      }
-      section h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
+    <!-- Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="3a92a1ef-bc94-42d8-aede-47d7916bb77b"></script>
 </head>
 <body>
 
-  <!-- Header -->
-  <div id="header"></div>
-  <script>
+<div id="header"></div>
+<script>
     async function loadHeader() {
-      const headerResp = await fetch('header.html?cache=' + new Date().getTime());
-      document.getElementById('header').innerHTML = await headerResp.text();
+        const headerUrl = 'header.html?cache=' + new Date().getTime();
+        document.getElementById('header').innerHTML = await (await fetch(headerUrl)).text();
     }
     loadHeader();
-  </script>
+</script>
 
-  <!-- Main Content -->
-  <main>
-    <h1>&</h1>
+<main>
+    <h1 class="main-heading">&</h1>
 
-    <section>
-      <h2>About</h2>
-      <p>Developer & TouchDesigner artist</p>
-    </section>
+    <div class="cards-container">
+        <div class="card">Audio Reactive Abstract Geometry</div>
+        <div class="card">Particle Systems</div>
+        <div class="card">API Text DAT</div>
+        <div class="card">Generative Max for Live Tools</div>
+    </div>
+</main>
 
-    <section>
-      <h2>Other Artists</h2>
-      <p>Ingebar_music</p>
-    </section>
-
-    <section>
-      <h2>Hardware</h2>
-      <p>Pittsburgh Lifeforms / Presonus Studio 1810</p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <div id="footer"></div>
-  <script>
+<div id="footer"></div>
+<script>
     async function loadFooter() {
-      document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
+        document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
     }
     loadFooter();
-  </script>
+</script>
+
+<!-- p5.js background script -->
+<script src="projects-bg.js"></script>
 
 </body>
 </html>
