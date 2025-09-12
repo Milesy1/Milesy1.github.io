@@ -1,72 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miles Waite - Projects</title>
 
-    <link rel="icon" href="images.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
-    <!-- Analytics -->
-    <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4B9899H34T');
-    </script>
+  <!-- Analytics -->
+  <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="projects.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 
-    <!-- p5.js for background -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
+  <!-- p5.js -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
+
+  <style>
+    /* Mobile-first reset for canvas pages */
+    body.projects-page {
+      background-color: transparent; /* let p5.js handle background */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      align-items: center;
+    }
+
+    #canvas-wrapper {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      background: #d3d3d3; /* default grey before p5 draws */
+    }
+
+    #canvas-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 1000px;
+      padding: 2rem 0;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    main h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      font-family: 'Manrope', sans-serif;
+    }
+
+    main h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      main h1 {
+        font-size: 2rem;
+      }
+      main h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="projects-page">
 
-<div id="header"></div>
-<script>
+  <!-- Header -->
+  <div id="header"></div>
+  <script>
     async function loadHeader() {
-        const headerUrl = 'header.html?cache=' + new Date().getTime();
-        const headerResp = await fetch(headerUrl);
-        document.getElementById('header').innerHTML = await headerResp.text();
+      const headerResp = await fetch('header.html?cache=' + new Date().getTime());
+      document.getElementById('header').innerHTML = await headerResp.text();
     }
     loadHeader();
-</script>
+  </script>
 
-<main>
+  <!-- Background Canvas -->
+  <div id="canvas-wrapper">
+    <div id="canvas-container"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
     <h1>TouchDesigner</h1>
 
     <section>
-        <h2>Audio Reactive Abstract Geometry</h2>
-        <p>A flexible modular system with multiple containers producing modulated abstract geometry on the fly</p>
+      <h2>Audio Reactive Abstract Geometry</h2>
+      <p>A flexible modular system with multiple containers producing modulated abstract geometry on the fly</p>
     </section>
 
     <section>
-        <h2>Particle Systems</h2>
-        <p>Velocity-driven particle based visualisations</p>
+      <h2>Particle Systems</h2>
+      <p>Velocity-driven particle based visualisations</p>
     </section>
 
     <section>
-        <h2>API Text DAT</h2>
-        <p>API Text DAT pulls live text from external sources and converts it into data for dynamic, real-time visualizations in TouchDesigner</p>
+      <h2>API Text DAT</h2>
+      <p>API Text DAT pulls live text from external sources and converts it into data for dynamic, real-time visualizations in TouchDesigner</p>
     </section>
-</main>
+  </main>
 
-<div id="footer"></div>
-<script>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
     async function loadFooter() {
-        document.getElementById('footer').innerHTML =
-            await (await fetch('footer.html')).text();
+      document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
     }
     loadFooter();
-</script>
+  </script>
 
-<!-- p5.js background script -->
-<script src="projects-bg.js"></script>
+  <!-- p5.js background script -->
+  <script src="projects-bg.js"></script>
 
 </body>
 </html>

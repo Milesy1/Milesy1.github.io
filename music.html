@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite - Music</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miles Waite - Music</title>
 
-    <link rel="icon" href="images.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="images.png" type="image/png" />
 
-    <!-- Analytics -->
-    <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-4B9899H34T');
-    </script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="music.css">
+  <!-- Analytics -->
+  <script defer data-domain="mileswaite.net" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="music.css" />
+
+  <style>
+    /* Mobile-first baseline */
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      font-family: 'Manrope', sans-serif;
+      background-color: #d3d3d3;
+      color: var(--text-color, #000);
+    }
+
+    main {
+      flex: 1;
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    main h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        width: 95%;
+        gap: 1.5rem;
+      }
+      main h1 {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div id="header"></div>
-<script>
+  <!-- Header -->
+  <div id="header"></div>
+  <script>
     async function loadHeader() {
-        const headerUrl = 'header.html?cache=' + new Date().getTime();
-        const headerResp = await fetch(headerUrl);
-        document.getElementById('header').innerHTML = await headerResp.text();
+      const headerResp = await fetch('header.html?cache=' + new Date().getTime());
+      document.getElementById('header').innerHTML = await headerResp.text();
     }
     loadHeader();
-</script>
+  </script>
 
-<main>
+  <!-- Main Content -->
+  <main>
     <h1>Music</h1>
 
     <section>
-        <h2>Glitch</h2>
-        <p>Glitch aesthetic - WIP.</p>
+      <h2>Glitch</h2>
+      <p>Glitch aesthetic - WIP.</p>
     </section>
 
     <section>
-        <h2>Max for Live Devices</h2>
-        <p>Utilities built inside Max for Live — sequencers, modulators, and experimental AI integrations.</p>
+      <h2>Max for Live Devices</h2>
+      <p>Utilities built inside Max for Live — sequencers, modulators, and experimental AI integrations.</p>
     </section>
 
     <section>
-        <h2>Particles</h2>
-        <p>My upcoming generative audio-visual project — each keystroke generates particles and ambient notes, creating a live-played visual composition.</p>
+      <h2>Particles</h2>
+      <p>My upcoming generative audio-visual project — each keystroke generates particles and ambient notes, creating a live-played visual composition.</p>
     </section>
-</main>
+  </main>
 
-<div id="footer"></div>
-<script>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
     async function loadFooter() {
-        document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
+      document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
     }
     loadFooter();
-</script>
+  </script>
 
 </body>
 </html>
