@@ -67,7 +67,7 @@ header {
     max-width: 1200px;
     box-sizing: border-box;
     text-align: center;
-    position: relative; /* needed for mobile adjustments */
+    position: relative;
 }
 
 header a {
@@ -196,7 +196,7 @@ p {
     font-family: "Scto Grotesk A", Arial, sans-serif;
     font-size: 14px;
     color: #000000;
-    opacity: 0;
+    opacity: 1; /* visible on desktop */
     pointer-events: none;
     user-select: none;
     z-index: 1000;
@@ -235,7 +235,11 @@ p {
 }
 
 @media (max-width: 600px) {
-    /* header links + signature inline and aligned vertically */
+    /* Hide signature entirely on mobile index page */
+    body#index-page .site-signature {
+        display: none;
+    }
+
     #header {
         display: flex;
         flex-wrap: wrap;
@@ -246,17 +250,8 @@ p {
         padding-right: 10px;
     }
 
-    /* signature becomes inline inside header */
-    .site-signature {
-        position: relative;
-        top: 0;
-        left: 0;
-        font-size: 12px;
-        margin-right: 0.5rem; /* small gap before first header link */
-    }
-
     #header a, #footer a {
-        font-size: 12px;
+        font-size: 12px; /* mobile links slightly smaller */
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -273,7 +268,7 @@ p {
         gap: 0.4rem;
     }
 
-    #header a, #footer a, .site-signature {
+    #header a, #footer a {
         font-size: 11px;
     }
 
