@@ -215,7 +215,7 @@ p {
     #header, #footer {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* allow links to wrap */
         gap: 1rem;
     }
 
@@ -231,15 +231,14 @@ p {
         font-size: 0.9rem;
     }
 
-    /* Allow scrolling on mobile if content overflows */
     body {
-        overflow: auto;
+        overflow: auto; /* enable scroll if content exceeds viewport */
     }
 }
 
 @media (max-width: 600px) {
     #header, #footer {
-        flex-direction: column;
+        flex-direction: column; /* stack links vertically */
         gap: 0.8rem;
     }
 
