@@ -84,9 +84,10 @@ footer {
         overflow: hidden;      /* remove body scrollbar */
     }
 
+    /* Header adjustments */
     header {
         display: flex;
-        flex-direction: row;   /* keep links inline */
+        flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         gap: 0.5rem;
@@ -99,7 +100,8 @@ footer {
 
     header a {
         display: inline-block;
-        font-size: 12px;       /* smaller to fit inline */
+        font-size: 14px;       /* slightly bigger for mobile */
+        font-weight: 500;      /* medium weight */
         text-decoration: none;
     }
 
@@ -122,7 +124,7 @@ footer {
         max-width: 250px;
         height: 180px;
         opacity: 0;
-        transform: translateY(5px); /* smaller for no initial scroll */
+        transform: translateY(5px);
         animation: fadeInMobile 1.5s ease forwards;
     }
 
