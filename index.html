@@ -16,8 +16,6 @@
 
   <!-- Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="3a92a1ef-bc94-42d8-aede-47d7916bb77b"></script>
-
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,7 +24,7 @@
     gtag('config', 'G-4B9899H34T');
   </script>
 
-  <!-- Open Graph / Twitter metadata -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Miles Waite" />
   <meta property="og:description" content="Developer & creative technologist: TouchDesigner - Live 12.3 - Code." />
   <meta property="og:image" content="https://mileswaite.net/preview.jpg" />
@@ -50,11 +48,21 @@
       from { opacity: 0; transform: scale(0.95); }
       to   { opacity: 1; transform: scale(1); }
     }
+
+    /* Optional background square fade-in */
+    #square-bg {
+      opacity: 0;
+      animation: fadeInBg 2s ease forwards;
+    }
+    @keyframes fadeInBg {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Header placeholder -->
+  <!-- Header -->
   <div id="header"></div>
   <script>
     async function loadHeader() {
@@ -64,11 +72,14 @@
     loadHeader();
   </script>
 
+  <!-- Canvas wrapper -->
   <div id="canvas-wrapper">
-    <div id="canvas-container"></div>
+    <div id="canvas-container">
+      <div id="square-bg"></div>
+    </div>
   </div>
 
-  <!-- Footer placeholder -->
+  <!-- Footer -->
   <div id="footer"></div>
   <script>
     async function loadFooter() {
@@ -86,7 +97,6 @@
     let angle = 0;
     let innerColorCycle = 0;
     let cubeAlpha = 0;
-
     const canvasContainer = document.getElementById('canvas-container');
 
     new p5((p) => {
@@ -97,18 +107,14 @@
       };
 
       p.keyPressed = function () {
-        if (p.key === 's' || p.key === 'S') {
-          p.saveCanvas('screenshot', 'png');
-        }
+        if (p.key === 's' || p.key === 'S') p.saveCanvas('screenshot', 'png');
       };
 
       p.draw = function () {
-        // Use p5 background for the theme
         const bgColor = isBlackTheme ? 0 : 255;
         if (cubeAlpha < 255) cubeAlpha += 2;
         p.background(bgColor);
 
-        // Camera
         const camRadius = 850;
         const camX = p.cos(angle * 0.3) * camRadius;
         const camY = -100;
@@ -124,7 +130,7 @@
         p.box(360);
         p.pop();
 
-        // Inner cube with cycling colors
+        // Inner cube
         p.push();
         p.noFill();
         p.rotateX(-angle*0.8);
@@ -144,7 +150,6 @@
           else if (phase<(2*p.TWO_PI/3)){ const t=(phase-p.TWO_PI/3)/(p.TWO_PI/3); rC=yellow.r+(blue.r-yellow.r)*t; gC=yellow.g+(blue.g-yellow.g)*t; bC=yellow.b+(blue.b-yellow.b)*t; }
           else{ const t=(phase-2*p.TWO_PI/3)/(p.TWO_PI/3); rC=blue.r*(1-t); gC=blue.g*(1-t); bC=blue.b*(1-t); }
         }
-
         p.stroke(p.color(rC,gC,bC,cubeAlpha));
         p.box(144);
         p.pop();
