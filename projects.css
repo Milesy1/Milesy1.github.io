@@ -1,5 +1,5 @@
 /* ---------------------------- */
-/* Projects Page                */
+/* Projects Page - Desktop      */
 /* ---------------------------- */
 body, html {
     min-height: 100%;
@@ -15,7 +15,7 @@ main {
     align-items: center;
     padding: 2rem 1rem;
     position: relative;
-    z-index: 1; /* content above animation */
+    z-index: 1;
 }
 
 .cards-container {
@@ -23,17 +23,16 @@ main {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 2rem;
-    margin-top: 4rem; /* increased from 2rem to lower the cards */
+    margin-top: 4rem;
     max-width: 1200px;
 }
 
-/* Individual card styling */
 .card {
     width: 200px;
     height: 200px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,10 +43,9 @@ main {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Main heading spacing */
 .main-heading {
     text-align: center;
     margin-top: 3rem;
@@ -55,12 +53,13 @@ main {
     font-size: 2.5rem;
 }
 
-/* Footer at the bottom */
 footer {
     margin-top: auto;
 }
 
-/* Responsive adjustments */
+/* ---------------------------- */
+/* Desktop Responsive Adjustments */
+/* ---------------------------- */
 @media (max-width: 1024px) {
     .cards-container {
         gap: 1.5rem;
@@ -88,5 +87,100 @@ footer {
         width: 80%;
         max-width: 250px;
         height: 180px;
+    }
+}
+
+/* ---------------------------- */
+/* Mobile-only adjustments      */
+/* ---------------------------- */
+@media (max-width: 600px) {
+
+    html, body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column; /* signature & main heading stacked */
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0 10px;
+    }
+
+    /* Signature first */
+    header .site-signature {
+        display: block;
+        order: 1;
+        font-size: 12px;
+        margin-bottom: 2px;
+        opacity: 0;
+        animation: fadeInMobile 1.5s ease forwards;
+        animation-delay: 0.1s;
+    }
+
+    /* Main heading second */
+    header .main-heading {
+        order: 2;
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+        opacity: 0;
+        animation: fadeInMobile 1.5s ease forwards;
+        animation-delay: 0.4s;
+    }
+
+    /* Clickable links third - inline */
+    header > a {
+        display: inline-block;
+        order: 3;
+        font-size: 12px;
+        margin-right: 0.5rem;
+        opacity: 0;
+        animation: fadeInMobile 1.5s ease forwards;
+        animation-delay: 0.7s;
+    }
+
+    /* Cards container */
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        max-height: calc(100vh - 100px); /* leave space for header + links */
+        overflow-y: auto;               /* internal scroll only */
+        width: 100%;
+        padding: 0 5px 5px 5px;
+        box-sizing: border-box;
+    }
+
+    /* Cards fade-in with stagger */
+    .card {
+        width: 90%;
+        max-width: 250px;
+        height: 180px;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeInMobile 1.5s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 1s; }
+    .card:nth-child(2) { animation-delay: 1.3s; }
+    .card:nth-child(3) { animation-delay: 1.6s; }
+    .card:nth-child(4) { animation-delay: 1.9s; }
+
+    @keyframes fadeInMobile {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 }
