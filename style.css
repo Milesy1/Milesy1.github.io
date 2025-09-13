@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden; /* removes scrollbars on desktop */
     background-color: #d3d3d3;
     color: var(--text-color, #000);
     transition: background-color 1.5s ease, color 1.5s ease;
@@ -40,7 +40,7 @@ body.white-theme {
 }
 
 /* ---------------------------- */
-/* Stardos Stencil Font (Header)*/
+/* Fonts                        */
 /* ---------------------------- */
 @font-face {
     font-family: 'StardosStencil';
@@ -191,68 +191,11 @@ p {
     font-family: "Scto Grotesk A", Arial, sans-serif;
     font-size: 14px;
     color: #000000;
-    opacity: 0; /* start hidden */
+    opacity: 0;
     pointer-events: none;
     user-select: none;
     z-index: 1000;
-    animation: fadeInCinematic 4s ease-in-out forwards; /* slower, smoother */
+    animation: fadeInCinematic 4s ease-in-out forwards;
 }
 
-@keyframes fadeInCinematic {
-    0% { opacity: 0; transform: translateY(-10px); }
-    50% { opacity: 0.5; transform: translateY(-5px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------------------------- */
-/* Responsive Adjustments       */
-/* ---------------------------- */
-@media (max-width: 900px) {
-    header {
-        gap: 1rem;
-        font-size: 1rem;
-    }
-
-    #canvas-container {
-        width: 80vw;
-        height: 80vw;
-    }
-
-    #square-bg {
-        width: 60vw;
-        height: 60vw;
-    }
-
-    .main-heading {
-        font-size: 1.75rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        gap: 0.8rem;
-        font-size: 0.9rem;
-    }
-
-    #canvas-container {
-        width: 90vw;
-        height: 90vw;
-    }
-
-    #square-bg {
-        width: 70vw;
-        height: 70vw;
-    }
-
-    .main-heading {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.85rem;
-    }
-}
+@k
