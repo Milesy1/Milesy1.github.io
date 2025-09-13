@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* remove desktop scrollbars */
+    overflow-x: hidden; /* prevent horizontal scroll */
     background-color: #d3d3d3;
     color: var(--text-color, #000);
     transition: background-color 1.5s ease, color 1.5s ease;
@@ -187,26 +187,18 @@ p {
 }
 
 /* ---------------------------- */
-/* Site Signature               */
+/* Site Signature (desktop only)*/
 /* ---------------------------- */
 .site-signature {
-    position: fixed; /* desktop top-left */
+    position: fixed;
     top: 10px;
     left: 15px;
     font-family: "Scto Grotesk A", Arial, sans-serif;
     font-size: 14px;
     color: #000000;
-    opacity: 1; /* visible on desktop */
     pointer-events: none;
     user-select: none;
     z-index: 1000;
-    animation: fadeInCinematic 4s ease-in-out forwards;
-}
-
-@keyframes fadeInCinematic {
-    0% { opacity: 0; transform: translateY(-10px); }
-    50% { opacity: 0.5; transform: translateY(-5px); }
-    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ---------------------------- */
@@ -230,28 +222,24 @@ p {
     }
 
     body {
-        overflow: auto; /* allow scrolling on mobile */
+        overflow: auto;
     }
 }
 
 @media (max-width: 600px) {
-    /* Hide signature entirely on mobile index page */
-    body#index-page .site-signature {
-        display: none;
-    }
-
+    /* Mobile adjustments */
     #header {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        align-items: center; /* vertical alignment */
+        align-items: center;
         gap: 0.5rem;
         padding-left: 10px;
         padding-right: 10px;
     }
 
     #header a, #footer a {
-        font-size: 12px; /* mobile links slightly smaller */
+        font-size: 12px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -260,6 +248,11 @@ p {
 
     p {
         font-size: 0.85rem;
+    }
+
+    /* Hide signature entirely on mobile index page */
+    body#index-page .site-signature {
+        display: none !important;
     }
 }
 
