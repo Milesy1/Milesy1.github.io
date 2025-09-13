@@ -184,6 +184,10 @@ p {
     text-align: center;
     margin-bottom: 1.5rem;
 }
+
+/* ---------------------------- */
+/* Site Signature               */
+/* ---------------------------- */
 .site-signature {
     position: fixed;
     top: 10px;
@@ -198,4 +202,89 @@ p {
     animation: fadeInCinematic 4s ease-in-out forwards;
 }
 
-@k
+@keyframes fadeInCinematic {
+    0% { opacity: 0; transform: translateY(-10px); }
+    50% { opacity: 0.5; transform: translateY(-5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------- */
+/* Mobile-only adjustments      */
+/* ---------------------------- */
+@media (max-width: 900px) {
+    #header, #footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    #header a, #footer a {
+        font-size: 0.95rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.75rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    /* Allow scrolling on mobile if content overflows */
+    body {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    #header, #footer {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    #header a, #footer a {
+        font-size: 0.9rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    /* Signature adjustment */
+    .site-signature {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    #header, #footer {
+        gap: 0.5rem;
+    }
+
+    #header a, #footer a {
+        font-size: 0.8rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .site-signature {
+        top: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 11px;
+    }
+}
