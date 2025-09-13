@@ -8,11 +8,11 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     background-color: #d3d3d3;
     color: var(--text-color, #000);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    overflow-x: hidden; /* desktop scroll ok */
 }
 
 /* ---------------------------- */
@@ -23,9 +23,6 @@ html, body {
     --bg-white: #fff;
     --text-white: #fff;
     --text-black: #000;
-    --yellow-bright: #fff822;
-    --blue-bright: #2288ff;
-    --red-bright: #ff2222;
 }
 
 body.black-theme {
@@ -36,17 +33,6 @@ body.black-theme {
 body.white-theme {
     --bg-color: var(--bg-white);
     --text-color: var(--text-black);
-}
-
-/* ---------------------------- */
-/* Stardos Stencil Font (Header)*/
-/* ---------------------------- */
-@font-face {
-    font-family: 'StardosStencil';
-    src: url('fonts/StardosStencil-Regular.woff2') format('woff2'),
-         url('fonts/StardosStencil-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }
 
 /* ---------------------------- */
@@ -64,7 +50,6 @@ header {
     user-select: none;
     width: 100%;
     max-width: 1200px;
-    box-sizing: border-box;
     text-align: center;
 }
 
@@ -73,9 +58,7 @@ header a {
     position: relative;
     padding-bottom: 4px;
     text-decoration: none;
-    color: #000000;
-    font-family: "Scto Grotesk A", Arial, sans-serif;
-    font-size: 14px;
+    color: #000;
 }
 
 header a::after {
@@ -110,22 +93,23 @@ header a[aria-current="page"] {
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100%;
 }
 
 #canvas-container {
     position: relative;
-    width: 400px;
-    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 400px;
+    height: 400px;
 }
 
 #square-bg {
     width: 280px;
     height: 280px;
     border-radius: 6px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
     z-index: 0;
 }
 
@@ -159,66 +143,23 @@ footer a img:hover {
 }
 
 /* ---------------------------- */
-/* Headings & Text              */
+/* Mobile overrides ONLY        */
 /* ---------------------------- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    margin: 0.5rem 0;
-}
-
-p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 0.95rem;
-    line-height: 1.5rem;
-}
-
-/* ---------------------------- */
-/* Main Heading                 */
-/* ---------------------------- */
-.main-heading {
-    font-family: 'StardosStencil', sans-serif;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-/* ---------------------------- */
-/* Mobile-Only Adjustments      */
-/* ---------------------------- */
-@media (max-width: 600px) {
-
-    /* Hide signature on mobile index page */
-    body#index-page header .site-signature {
-        display: none !important;
+@media (max-width: 700px) {
+    /* Remove scroll bar on mobile */
+    body {
+        overflow: hidden;
     }
 
-    /* Header adjustments */
-    header {
-        justify-content: flex-start;
-        gap: 0.5rem;
-        padding-left: 10px;
-        padding-right: 10px;
-        flex-wrap: wrap;
-    }
-
-    header a, footer a {
-        font-size: 12px;
-    }
-
-    /* Canvas wrapper adjustments */
-    #canvas-wrapper {
-        justify-content: center;
-        align-items: flex-start;
-        width: 100%;
-        height: auto;
-        padding: 10px 0;
-    }
-
+    /* Canvas & cubes */
     #canvas-container {
         width: 90vw;
         height: 90vw;
+        max-width: 400px;
+        max-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #square-bg {
@@ -226,7 +167,16 @@ p {
         height: 70vw;
     }
 
-    .main-heading {
-        font-size: 1.5rem;
+    /* Header adjustments for mobile */
+    header {
+        flex-direction: row;       /* inline headers */
+        justify-content: center;
+        flex-wrap: wrap;           /* allows wrapping if needed */
+        gap: 1rem;
+        font-size: 1rem;           /* slightly smaller */
+    }
+
+    header a {
+        font-size: 0.95rem;       /* fit inline on small screens */
     }
 }
