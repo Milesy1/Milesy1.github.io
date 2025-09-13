@@ -11,13 +11,13 @@
   <!-- p5.js -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
 
-   <!-- Inter font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-  <!--  Analytics -->
+  <!-- Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="3a92a1ef-bc94-42d8-aede-47d7916bb77b"></script>
 
-  <!-- Google Analytics (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B9899H34T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -26,39 +26,46 @@
     gtag('config', 'G-4B9899H34T');
   </script>
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Twitter metadata -->
   <meta property="og:title" content="Miles Waite" />
   <meta property="og:description" content="Developer & creative technologist: TouchDesigner - Live 12.3 - Code." />
   <meta property="og:image" content="https://mileswaite.net/preview.jpg" />
   <meta property="og:url" content="https://mileswaite.net" />
   <meta property="og:type" content="website" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Miles Waite" />
   <meta name="twitter:description" content="Developer & creative technologist: TouchDesigner - Live 12.3 - Code." />
   <meta name="twitter:image" content="https://mileswaite.net/preview.jpg" />
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Canvas fade-in */
+    canvas {
+      opacity: 0;
+      animation: fadeInCanvas 2s ease forwards;
+    }
+
+    @keyframes fadeInCanvas {
+      from { opacity: 0; transform: scale(0.95); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+  </style>
 </head>
 
 <body>
   <!-- Header placeholder -->
   <div id="header"></div>
-
   <script>
     async function loadHeader() {
       const headerUrl = 'header.html?cache=' + new Date().getTime();
-      const headerResp = await fetch(headerUrl);
-      document.getElementById('header').innerHTML = await headerResp.text();
+      document.getElementById('header').innerHTML = await (await fetch(headerUrl)).text();
     }
     loadHeader();
   </script>
 
   <div id="canvas-wrapper">
-    <div id="canvas-container">
-      <div id="square-bg"></div>
-    </div>
+    <div id="canvas-container"></div>
   </div>
 
   <!-- Footer placeholder -->
@@ -76,9 +83,6 @@
     const isBlackTheme = Math.random() < 0.5;
     document.body.classList.add(isBlackTheme ? 'black-theme' : 'white-theme');
 
-    const squareBg = document.getElementById('square-bg');
-    squareBg.style.backgroundColor = isBlackTheme ? '#fff' : '#000';
-
     let angle = 0;
     let innerColorCycle = 0;
     let cubeAlpha = 0;
@@ -88,7 +92,7 @@
     new p5((p) => {
       p.setup = function () {
         p.createCanvas(540, 540, p.WEBGL).parent(canvasContainer);
-        p.noFill(); // ensure wireframe
+        p.noFill();
         p.strokeWeight(2);
       };
 
@@ -99,9 +103,10 @@
       };
 
       p.draw = function () {
-        p.background(
-          getComputedStyle(document.body).getPropertyValue('--bg-color').trim()
-        );
+        // Use p5 background for the theme
+        const bgColor = isBlackTheme ? 0 : 255;
+        if (cubeAlpha < 255) cubeAlpha += 2;
+        p.background(bgColor);
 
         // Camera
         const camRadius = 850;
@@ -110,68 +115,42 @@
         const camZ = p.sin(angle * 0.3) * camRadius;
         p.camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
 
-        if (cubeAlpha < 255) cubeAlpha += 2;
-
         // Outer cube
         p.push();
         p.noFill();
-        p.stroke(isBlackTheme ? p.color(255, 255, 255, cubeAlpha) : p.color(0, 0, 0, cubeAlpha));
+        p.stroke(isBlackTheme ? p.color(255,255,255,cubeAlpha) : p.color(0,0,0,cubeAlpha));
         p.rotateX(angle * 0.5);
         p.rotateY(angle);
-        drawCube(p, 360);
+        p.box(360);
         p.pop();
 
         // Inner cube with cycling colors
         p.push();
         p.noFill();
-        p.rotateX(-angle * 0.8);
-        p.rotateZ(angle * 0.3);
+        p.rotateX(-angle*0.8);
+        p.rotateZ(angle*0.3);
         innerColorCycle += 0.01;
         if (innerColorCycle > p.TWO_PI) innerColorCycle = 0;
 
-        let rC, gC, bC;
+        let rC,gC,bC;
         const phase = innerColorCycle;
-
         if (isBlackTheme) {
-          if (phase < p.TWO_PI / 3) {
-            const t = phase / (p.TWO_PI / 3);
-            rC = 255; gC = 255 * (1 - t); bC = 255 * (1 - t);
-          } else if (phase < (2 * p.TWO_PI) / 3) {
-            const t = (phase - p.TWO_PI / 3) / (p.TWO_PI / 3);
-            rC = 255 * (1 - t); gC = 0; bC = 255 * t;
-          } else {
-            const t = (phase - (2 * p.TWO_PI) / 3) / (p.TWO_PI / 3);
-            rC = 255 * t; gC = 255 * t; bC = 255;
-          }
+          if (phase < p.TWO_PI/3){ const t = phase/(p.TWO_PI/3); rC=255; gC=255*(1-t); bC=255*(1-t); }
+          else if (phase<(2*p.TWO_PI/3)){ const t=(phase-p.TWO_PI/3)/(p.TWO_PI/3); rC=255*(1-t); gC=0; bC=255*t; }
+          else{ const t=(phase-2*p.TWO_PI/3)/(p.TWO_PI/3); rC=255*t; gC=255*t; bC=255; }
         } else {
-          const yellow = { r: 255, g: 248, b: 34 };
-          const blue = { r: 34, g: 136, b: 255 };
-          if (phase < p.TWO_PI / 3) {
-            const t = phase / (p.TWO_PI / 3);
-            rC = yellow.r * t; gC = yellow.g * t; bC = yellow.b * t;
-          } else if (phase < (2 * p.TWO_PI) / 3) {
-            const t = (phase - p.TWO_PI / 3) / (p.TWO_PI / 3);
-            rC = yellow.r + (blue.r - yellow.r) * t;
-            gC = yellow.g + (blue.g - yellow.g) * t;
-            bC = yellow.b + (blue.b - yellow.b) * t;
-          } else {
-            const t = (phase - (2 * p.TWO_PI) / 3) / (p.TWO_PI / 3);
-            rC = blue.r * (1 - t);
-            gC = blue.g * (1 - t);
-            bC = blue.b * (1 - t);
-          }
+          const yellow={r:255,g:248,b:34}, blue={r:34,g:136,b:255};
+          if (phase<p.TWO_PI/3){ const t=phase/(p.TWO_PI/3); rC=yellow.r*t; gC=yellow.g*t; bC=yellow.b*t; }
+          else if (phase<(2*p.TWO_PI/3)){ const t=(phase-p.TWO_PI/3)/(p.TWO_PI/3); rC=yellow.r+(blue.r-yellow.r)*t; gC=yellow.g+(blue.g-yellow.g)*t; bC=yellow.b+(blue.b-yellow.b)*t; }
+          else{ const t=(phase-2*p.TWO_PI/3)/(p.TWO_PI/3); rC=blue.r*(1-t); gC=blue.g*(1-t); bC=blue.b*(1-t); }
         }
 
-        p.stroke(p.color(rC, gC, bC, cubeAlpha));
-        drawCube(p, 144);
+        p.stroke(p.color(rC,gC,bC,cubeAlpha));
+        p.box(144);
         p.pop();
 
         angle += 0.0065;
       };
-
-      function drawCube(p, size) {
-        p.box(size);
-      }
     }, canvasContainer);
   </script>
 </body>
