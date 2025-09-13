@@ -8,10 +8,9 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-x: hidden;
     background-color: #d3d3d3;
     color: var(--text-color, #000);
-    transition: background-color 1.5s ease, color 1.5s ease;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
@@ -40,7 +39,7 @@ body.white-theme {
 }
 
 /* ---------------------------- */
-/* Fonts                        */
+/* Stardos Stencil Font (Header)*/
 /* ---------------------------- */
 @font-face {
     font-family: 'StardosStencil';
@@ -67,7 +66,6 @@ header {
     max-width: 1200px;
     box-sizing: border-box;
     text-align: center;
-    position: relative;
 }
 
 header a {
@@ -187,89 +185,48 @@ p {
 }
 
 /* ---------------------------- */
-/* Site Signature (desktop only)*/
+/* Mobile-Only Adjustments      */
 /* ---------------------------- */
-.site-signature {
-    position: fixed;
-    top: 10px;
-    left: 15px;
-    font-family: "Scto Grotesk A", Arial, sans-serif;
-    font-size: 14px;
-    color: #000000;
-    pointer-events: none;
-    user-select: none;
-    z-index: 1000;
-}
-
-/* ---------------------------- */
-/* Mobile-only adjustments      */
-/* ---------------------------- */
-@media (max-width: 900px) {
-    #header, #footer {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 1rem;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.75rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    body {
-        overflow: auto;
-    }
-}
-
 @media (max-width: 600px) {
-    /* Mobile adjustments */
-    #header {
-        display: flex;
-        flex-wrap: wrap;
+
+    /* Hide signature on mobile index page */
+    body#index-page header .site-signature {
+        display: none !important;
+    }
+
+    /* Header adjustments */
+    header {
         justify-content: flex-start;
-        align-items: center;
         gap: 0.5rem;
         padding-left: 10px;
         padding-right: 10px;
+        flex-wrap: wrap;
     }
 
-    #header a, #footer a {
+    header a, footer a {
         font-size: 12px;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    /* Canvas wrapper adjustments */
+    #canvas-wrapper {
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    #canvas-container {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    #square-bg {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .main-heading {
         font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.85rem;
-    }
-
-    /* Hide signature entirely on mobile index page */
-    body#index-page .site-signature {
-        display: none !important;
-    }
-}
-
-@media (max-width: 400px) {
-    #header, #footer {
-        gap: 0.4rem;
-    }
-
-    #header a, #footer a {
-        font-size: 11px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.3rem;
-    }
-
-    p {
-        font-size: 0.8rem;
     }
 }
