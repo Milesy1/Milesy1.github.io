@@ -190,7 +190,7 @@ p {
 /* Site Signature               */
 /* ---------------------------- */
 .site-signature {
-    position: fixed; /* top-left for desktop and mobile */
+    position: fixed; /* desktop top-left */
     top: 10px;
     left: 15px;
     font-family: "Scto Grotesk A", Arial, sans-serif;
@@ -235,22 +235,28 @@ p {
 }
 
 @media (max-width: 600px) {
-    #header, #footer {
+    /* header links + signature inline and aligned vertically */
+    #header {
+        display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: center; /* vertical alignment */
         gap: 0.5rem;
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    #header a, #footer a, .site-signature {
-        font-size: 12px; /* smaller to fit nicely */
+    /* signature becomes inline inside header */
+    .site-signature {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 12px;
+        margin-right: 0.5rem; /* small gap before first header link */
     }
 
-    /* signature stays fixed top-left on mobile, same as header links */
-    .site-signature {
-        top: 5px;
-        left: 10px;
+    #header a, #footer a {
+        font-size: 12px;
     }
 
     h1, h2, h3, h4, h5, h6 {
