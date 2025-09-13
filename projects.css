@@ -23,7 +23,7 @@ main {
     justify-content: center;
     flex-wrap: nowrap;
     gap: 2rem;
-    margin-top: 4rem; /* position cards lower */
+    margin-top: 4rem;
     max-width: 1200px;
 }
 
@@ -78,15 +78,15 @@ footer {
 /* ---------------------------- */
 /* Mobile-only adjustments      */
 /* ---------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 700px) { /* covers most real phones */
     html, body {
-        height: 100vh;
-        overflow: hidden; /* remove mobile scrollbar */
+        height: 100vh;         /* fill viewport */
+        overflow: hidden;      /* remove body scrollbar */
     }
 
     header {
         display: flex;
-        flex-direction: row; /* keep links inline */
+        flex-direction: row;   /* keep links inline */
         align-items: center;
         justify-content: flex-start;
         gap: 0.5rem;
@@ -94,12 +94,12 @@ footer {
     }
 
     header .site-signature {
-        display: none; /* remove signature on mobile */
+        display: none;         /* hide signature on mobile */
     }
 
     header a {
         display: inline-block;
-        font-size: 12px; /* smaller to fit */
+        font-size: 12px;       /* smaller to fit inline */
         text-decoration: none;
     }
 
@@ -107,11 +107,13 @@ footer {
     .cards-container {
         flex-direction: column;
         align-items: center;
-        max-height: calc(100vh - 60px); /* adjust for header height */
-        overflow-y: auto; /* scroll only container if needed */
+        max-height: calc(100vh - 60px); /* header buffer */
+        overflow-y: auto;
         width: 100%;
         padding: 0 5px 5px 5px;
         box-sizing: border-box;
+        margin-top: 1rem;     /* reduce excess space */
+        gap: 0.8rem;
     }
 
     /* Cards fade-in with stagger */
@@ -120,7 +122,7 @@ footer {
         max-width: 250px;
         height: 180px;
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(5px); /* smaller for no initial scroll */
         animation: fadeInMobile 1.5s ease forwards;
     }
 
@@ -130,7 +132,7 @@ footer {
     .card:nth-child(4) { animation-delay: 1.4s; }
 
     @keyframes fadeInMobile {
-        from { opacity: 0; transform: translateY(-10px); }
+        from { opacity: 0; transform: translateY(5px); }
         to { opacity: 1; transform: translateY(0); }
     }
 }
