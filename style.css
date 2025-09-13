@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden; /* removes scrollbars on desktop */
+    overflow: hidden; /* remove desktop scrollbars */
     background-color: #d3d3d3;
     color: var(--text-color, #000);
     transition: background-color 1.5s ease, color 1.5s ease;
@@ -67,6 +67,7 @@ header {
     max-width: 1200px;
     box-sizing: border-box;
     text-align: center;
+    position: relative; /* needed for mobile adjustments */
 }
 
 header a {
@@ -189,7 +190,7 @@ p {
 /* Site Signature               */
 /* ---------------------------- */
 .site-signature {
-    position: fixed;
+    position: fixed; /* top-left for desktop and mobile */
     top: 10px;
     left: 15px;
     font-family: "Scto Grotesk A", Arial, sans-serif;
@@ -213,14 +214,11 @@ p {
 /* ---------------------------- */
 @media (max-width: 900px) {
     #header, #footer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; /* allow links to wrap */
+        flex-wrap: wrap;
+        justify-content: flex-start;
         gap: 1rem;
-    }
-
-    #header a, #footer a {
-        font-size: 0.95rem;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -232,18 +230,27 @@ p {
     }
 
     body {
-        overflow: auto; /* enable scroll if content exceeds viewport */
+        overflow: auto; /* allow scrolling on mobile */
     }
 }
 
 @media (max-width: 600px) {
     #header, #footer {
-        flex-direction: column; /* stack links vertically */
-        gap: 0.8rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    #header a, #footer a {
-        font-size: 0.9rem;
+    #header a, #footer a, .site-signature {
+        font-size: 12px; /* smaller to fit nicely */
+    }
+
+    /* signature stays fixed top-left on mobile, same as header links */
+    .site-signature {
+        top: 5px;
+        left: 10px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -253,23 +260,15 @@ p {
     p {
         font-size: 0.85rem;
     }
-
-    /* Signature adjustment */
-    .site-signature {
-        top: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 12px;
-    }
 }
 
 @media (max-width: 400px) {
     #header, #footer {
-        gap: 0.5rem;
+        gap: 0.4rem;
     }
 
-    #header a, #footer a {
-        font-size: 0.8rem;
+    #header a, #footer a, .site-signature {
+        font-size: 11px;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -278,12 +277,5 @@ p {
 
     p {
         font-size: 0.8rem;
-    }
-
-    .site-signature {
-        top: 5px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 11px;
     }
 }
