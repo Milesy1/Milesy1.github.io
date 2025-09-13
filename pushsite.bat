@@ -1,10 +1,12 @@
 @echo off
 cd /d C:\Users\Miles\TouchDesigner\Milesy1.github.io
-echo === Adding all changes ===
-git add --all
-echo === Committing changes ===
-git commit -m "update site"
-echo === Pushing to GitHub ===
+
+set /p msg=Enter commit message: 
+
+git add .
+git commit -m "%msg%"
 git push origin main
-echo === Done! ===
+
+echo.
+echo ✅ Push complete!
 pause
