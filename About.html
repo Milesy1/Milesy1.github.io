@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miles Waite - Projects</title>
+
+    <link rel="icon" href="images.png" type="image/png" />
+
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+    <!-- p5.js for background -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.min.js"></script>
+
+    <!-- Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="3a92a1ef-bc94-42d8-aede-47d7916bb77b"></script>
+</head>
+<body>
+
+<div id="header"></div>
+<script>
+    async function loadHeader() {
+        const headerUrl = 'header.html?cache=' + new Date().getTime();
+        document.getElementById('header').innerHTML = await (await fetch(headerUrl)).text();
+    }
+    loadHeader();
+</script>
+
+<main>
+    <h1 class="main-heading">About</h1>
+
+    <section class="about-summary">
+        <ul>
+            <li>Certified by the <strong>Santa Fe Institute of Complex Science</strong>, with expertise in complex, adaptive systems.</li>
+            <li>Designed and implemented <strong>real-time systems</strong>, automating processes and embedding <strong>antifragility principles</strong> so projects improve under stress.</li>
+            <li>Combine <strong>TouchDesigner and Python</strong> to create immersive, interactive, and reliable experiences — from generative visuals to audio-reactive installations.</li>
+            <li>Specialize in <strong>systems-thinking applied to creative tech</strong>, ensuring projects are visually compelling <em>and</em> technically robust.</li>
+            <li>Experienced in hybrid roles bridging technical problem solving and experimental creative work, delivering installations, live visuals, and interactive media with precision.</li>
+        </ul>
+        <p class="tagline">
+            <em>“Where robust systems meet immersive creativity — building interactive experiences that captivate and endure.”</em>
+        </p>
+    </section>
+</main>
+
+<div id="footer"></div>
+<script>
+    async function loadFooter() {
+        document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
+    }
+    loadFooter();
+</script>
+
+<!-- p5.js background script -->
+<script src="projects-bg.js"></script>
+
+</body>
+</html>
