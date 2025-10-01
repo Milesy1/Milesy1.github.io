@@ -1,137 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Miles Waite</title>
-
-  <link rel="icon" href="images.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miles Waite</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="index-page">
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">mileswaite.net</a>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header -->
-  <div id="header"></div>
-  <script>
-    async function loadHeader() {
-      let html = await (await fetch('header.html?cache=' + new Date().getTime())).text();
-      const temp = document.createElement('div');
-      temp.innerHTML = html;
+    <main>
+        <section class="hero">
+            <!-- Rotating Cube Canvas -->
+            <div id="cube-container"></div>
+            
+            <div class="hero-content">
+                <p class="subtitle">Creative Technology & Complex Systems</p>
+                <h1>
+                    <div class="moving-text">Emergent.</div>
+                    <div class="moving-text">Robust.</div>
+                    <div class="moving-text">Antifragile.</div>
+                </h1>
+                <p class="description">
+                    Certified by the Santa Fe Institute of Complex Science, with expertise in complex, adaptive systems. 
+                    20+ years experience in designing, implementing & testing large-scale real-time complex systems, 
+                    & automating company-wide processes.
+                </p>
+            </div>
+        </section>
 
-      // Remove signature on mobile index page
-      if (window.innerWidth <= 600 && document.body.id === 'index-page') {
-        const sig = temp.querySelector('.site-signature');
-        if (sig) sig.remove();
-      }
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Audio Reactive Abstract Geometry</h3>
+                    <p>Real-time geometric visualizations that respond dynamically to audio input using TouchDesigner and Python</p>
+                </div>
+                <div class="project-card">
+                    <h3>Particle Systems</h3>
+                    <p>Complex particle behaviors and emergent visual patterns in 3D space</p>
+                </div>
+                <div class="project-card">
+                    <h3>API Text DAT</h3>
+                    <p>Data-driven visualizations using real-time API feeds and text processing</p>
+                </div>
+                <div class="project-card">
+                    <h3>Generative Max for Live Tools</h3>
+                    <p>Custom Ableton Live devices for algorithmic music and visual generation</p>
+                </div>
+            </div>
+        </section>
 
-      document.getElementById('header').innerHTML = temp.innerHTML;
+        <section class="music" id="music">
+            <h2>Music</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Audio Reactive Visuals</h3>
+                    <p>Real-time generative visuals that respond to audio input using TouchDesigner and Python</p>
+                </div>
+                <div class="project-card">
+                    <h3>Live Performance</h3>
+                    <p>Interactive installations and live visual performances for events and exhibitions</p>
+                </div>
+                <div class="project-card">
+                    <h3>Generative Music</h3>
+                    <p>Algorithmic composition and procedural music generation systems</p>
+                </div>
+                <div class="project-card">
+                    <h3>Max for Live Tools</h3>
+                    <p>Custom devices and patches for Ableton Live integration</p>
+                </div>
+            </div>
+        </section>
 
-      // Highlight current page
-      const links = document.querySelectorAll("#header a");
-      const current = window.location.pathname.split("/").pop();
-      links.forEach(link => {
-        if (link.getAttribute("href") === current) {
-          link.setAttribute("aria-current", "page");
-        }
-      });
-    }
-    loadHeader();
-  </script>
+        <section class="code" id="code">
+            <h2>Code</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>TouchDesigner</h3>
+                    <p>Complex visual systems, real-time rendering, and interactive installations</p>
+                </div>
+                <div class="project-card">
+                    <h3>Python</h3>
+                    <p>Data processing, API integration, and automation for creative projects</p>
+                </div>
+                <div class="project-card">
+                    <h3>Systems Architecture</h3>
+                    <p>Large-scale real-time systems with antifragile design principles</p>
+                </div>
+                <div class="project-card">
+                    <h3>Creative Coding</h3>
+                    <p>Generative art, procedural graphics, and algorithmic design</p>
+                </div>
+            </div>
+        </section>
 
-  <!-- Canvas -->
-  <div id="canvas-wrapper">
-    <div id="canvas-container">
-      <div id="square-bg"></div>
-    </div>
-  </div>
+        <section class="about" id="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <ul>
+                        <li>Certified by the <strong>Santa Fe Institute of Complex Science</strong>, with expertise in complex, adaptive systems.</li>
+                        <li>20+ years experience in designing, implementing & testing large-scale <strong>real-time complex systems</strong>, & automating company-wide processes. Extensive use of <strong>antifragile principles</strong> that deliver robust projects that improve under stress.</li>
+                        <li>Proven experience of combining <strong>TouchDesigner and Python</strong> to create immersive, interactive, and reliable experiences — from generative visuals to audio-reactive installations.</li>
+                        <li>Specialise in <strong>systems-thinking applied to creative tech</strong>, ensuring projects are visually compelling <em>and</em> technically robust.</li>
+                        <li>Experienced in hybrid roles bridging technical problem solving and experimental creative work, delivering installations, live visuals, and interactive media with precision.</li>
+                    </ul>
+                    <p class="tagline">
+                        <em>"Emergent. Robust. Antifragile"</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer -->
-  <div id="footer"></div>
-  <script>
-    async function loadFooter() {
-      document.getElementById('footer').innerHTML = await (await fetch('footer.html')).text();
-    }
-    loadFooter();
-  </script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:lorenzsys@protonmail.com">Email</a>
+                <a href="https://github.com/Milesy1" target="_blank">GitHub</a>
+                <a href="https://www.instagram.com/miles_waite_td" target="_blank">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+                © 2025 Miles Waite. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
-  <!-- p5.js sketch -->
-  <script>
-    const isBlackTheme = Math.random() < 0.5;
-    document.body.classList.add(isBlackTheme ? 'black-theme' : 'white-theme');
-
-    let angle = 0;
-    let innerColorCycle = 0;
-    let cubeAlpha = 0;
-    const canvasContainer = document.getElementById('canvas-container');
-
-    new p5((p) => {
-      function resizeCanvasToContainer() {
-        const w = canvasContainer.offsetWidth;
-        p.resizeCanvas(w, w);
-      }
-
-      p.setup = function () {
-        const w = canvasContainer.offsetWidth;
-        p.createCanvas(w, w, p.WEBGL).parent(canvasContainer);
-        p.noFill();
-        p.strokeWeight(2);
-      };
-
-      p.windowResized = resizeCanvasToContainer;
-
-      p.keyPressed = function () {
-        if (p.key === 's' || p.key === 'S') p.saveCanvas('screenshot', 'png');
-      };
-
-      p.draw = function () {
-        const bgColor = isBlackTheme ? 0 : 255;
-        if (cubeAlpha < 255) cubeAlpha += 2;
-        p.background(bgColor);
-
-        const camRadius = 850;
-        const camX = p.cos(angle * 0.3) * camRadius;
-        const camY = -100;
-        const camZ = p.sin(angle * 0.3) * camRadius;
-        p.camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-
-        // Outer cube
-        p.push();
-        p.noFill();
-        p.stroke(isBlackTheme ? p.color(255,255,255,cubeAlpha) : p.color(0,0,0,cubeAlpha));
-        p.rotateX(angle * 0.5);
-        p.rotateY(angle);
-        p.box(360);
-        p.pop();
-
-        // Inner cube
-        p.push();
-        p.noFill();
-        p.rotateX(-angle*0.8);
-        p.rotateZ(angle*0.3);
-        innerColorCycle += 0.01;
-        if (innerColorCycle > p.TWO_PI) innerColorCycle = 0;
-
-        let rC,gC,bC;
-        const phase = innerColorCycle;
-        if (isBlackTheme) {
-          if (phase < p.TWO_PI/3){ const t = phase/(p.TWO_PI/3); rC=255; gC=255*(1-t); bC=255*(1-t); }
-          else if (phase<(2*p.TWO_PI/3)){ const t=(phase-p.TWO_PI/3)/(p.TWO_PI/3); rC=255*(1-t); gC=0; bC=255*t; }
-          else{ const t=(phase-2*p.TWO_PI/3)/(p.TWO_PI/3); rC=255*t; gC=255*t; bC=255; }
-        } else {
-          const yellow={r:255,g:248,b:34}, blue={r:34,g:136,b:255};
-          if (phase<p.TWO_PI/3){ const t=phase/(p.TWO_PI/3); rC=yellow.r*t; gC=yellow.g*t; bC=yellow.b*t; }
-          else if (phase<(2*p.TWO_PI/3)){ const t=(phase-p.TWO_PI/3)/(p.TWO_PI/3); rC=yellow.r+(blue.r-yellow.r)*t; gC=yellow.g+(blue.g-yellow.g)*t; bC=yellow.b+(blue.b-yellow.b)*t; }
-          else{ const t=(phase-2*p.TWO_PI/3)/(p.TWO_PI/3); rC=blue.r*(1-t); gC=blue.g*(1-t); bC=blue.b*(1-t); }
-        }
-        p.stroke(p.color(rC,gC,bC,cubeAlpha));
-        p.box(144);
-        p.pop();
-
-        angle += 0.0065;
-      };
-    }, canvasContainer);
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
