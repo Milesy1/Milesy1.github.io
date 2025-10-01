@@ -38,6 +38,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
 }
 
 .logo {
@@ -46,6 +47,9 @@ nav {
     text-decoration: none;
     color: #000;
     transition: opacity 0.3s ease;
+    position: absolute;
+    left: -2rem;
+    z-index: 1001;
 }
 
 .logo:hover {
@@ -56,6 +60,8 @@ nav {
     display: flex;
     gap: 2rem;
     list-style: none;
+    position: absolute;
+    right: -2rem;
 }
 
 .nav-links a {
@@ -156,6 +162,8 @@ nav {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
+    opacity: 0; /* Start hidden */
+    transform: translateX(-30px); /* Start off-screen */
 }
 
 .moving-text:hover {
@@ -182,8 +190,12 @@ section h2 {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 0; /* Start from the very left edge */
+    padding-right: 0; /* End at the very right edge */
 }
 
 .project-card {

@@ -17,7 +17,7 @@ new p5((p) => {
         const size = Math.min(container.offsetWidth, container.offsetHeight, 300);
         p.createCanvas(size, size, p.WEBGL).parent(container);
         p.noFill();
-        p.strokeWeight(1.5);
+        p.strokeWeight(2.5);
     };
 
     p.windowResized = resizeCanvasToContainer;
@@ -27,7 +27,7 @@ new p5((p) => {
     };
 
     p.draw = function () {
-        const bgColor = isBlackTheme ? 0 : 80; // Even lighter space-age grey (80) instead of white (255)
+        const bgColor = isBlackTheme ? 0 : 255; // White background for better contrast
         if (cubeVisible && cubeAlpha < 255) cubeAlpha += 2;
         p.background(bgColor); // Proper background color
 
@@ -42,7 +42,7 @@ new p5((p) => {
             // Outer cube
             p.push();
             p.noFill();
-            p.stroke(isBlackTheme ? p.color(255,255,255,cubeAlpha) : p.color(0,0,0,cubeAlpha));
+            p.stroke(isBlackTheme ? p.color(255,255,255,cubeAlpha) : p.color(0,0,0,255)); // Pure black lines on white
             p.rotateX(angle * 0.5);
             p.rotateY(angle);
             p.box(360);
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     text.style.transform = 'translateX(0)';
                 }, 200 + (index * 400)); // 400ms delay between each word (faster)
             });
-        }, 500);
+        }, 100); // Reduced delay to start animation almost immediately
         
         // 3. Show the cube and subtitle (Creative Technology & Complex Systems) immediately after "Antifragile" appears
         setTimeout(() => {
