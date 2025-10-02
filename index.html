@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Miles Waite</title>
+    <title>Miles Waite - Complex Systems & Creative Technology</title>
+    <meta name="description" content="Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mileswaite.net/" />
+    <meta property="og:title" content="Miles Waite - Complex Systems & Creative Technology" />
+    <meta property="og:description" content="Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology." />
+    <meta property="og:image" content="https://mileswaite.net/favicon-32x32.png" />
+    <meta property="og:site_name" content="Miles Waite" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mileswaite.net/" />
+    <meta property="twitter:title" content="Miles Waite - Complex Systems & Creative Technology" />
+    <meta property="twitter:description" content="Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology." />
+    <meta property="twitter:image" content="https://mileswaite.net/favicon-32x32.png" />
+    
+    <!-- Additional SEO -->
+    <meta name="keywords" content="complex systems, TouchDesigner, Python, creative technology, real-time systems, Santa Fe Institute, generative art, audio reactive, interactive installations" />
+    <meta name="author" content="Miles Waite" />
+    <link rel="canonical" href="https://mileswaite.net/" />
+    
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
@@ -17,7 +39,7 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#music">Music</a></li>
                 <li><a href="#code">Code</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -45,19 +67,19 @@
         <section class="projects" id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='audio-reactive-abstract-geometry.html'">
                     <h3>Audio Reactive Abstract Geometry</h3>
                     <p>Real-time geometric visualizations that respond dynamically to audio input using TouchDesigner and Python</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='particle-systems.html'">
                     <h3>Particle Systems</h3>
                     <p>Complex particle behaviors and emergent visual patterns in 3D space</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='api-text-dat.html'">
                     <h3>API Text DAT</h3>
                     <p>Data-driven visualizations using real-time API feeds and text processing</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='generative-max-for-live-tools.html'">
                     <h3>Generative Max for Live Tools</h3>
                     <p>Custom Ableton Live devices for algorithmic music and visual generation</p>
                 </div>
@@ -67,19 +89,19 @@
         <section class="music" id="music">
             <h2>Music</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='audio-reactive-visuals.html'">
                     <h3>Audio Reactive Visuals</h3>
                     <p>Real-time generative visuals that respond to audio input using TouchDesigner and Python</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='live-performance.html'">
                     <h3>Live Performance</h3>
                     <p>Interactive installations and live visual performances for events and exhibitions</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='generative-music.html'">
                     <h3>Generative Music</h3>
                     <p>Algorithmic composition and procedural music generation systems</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='max-for-live-tools.html'">
                     <h3>Max for Live Tools</h3>
                     <p>Custom devices and patches for Ableton Live integration</p>
                 </div>
@@ -89,50 +111,55 @@
         <section class="code" id="code">
             <h2>Code</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='touchdesigner.html'">
                     <h3>TouchDesigner</h3>
                     <p>Complex visual systems, real-time rendering, and interactive installations</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='python.html'">
                     <h3>Python</h3>
                     <p>Data processing, API integration, and automation for creative projects</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='systems-architecture.html'">
                     <h3>Systems Architecture</h3>
                     <p>Large-scale real-time systems with antifragile design principles</p>
                 </div>
-                <div class="project-card">
+                <div class="project-card" onclick="window.location.href='creative-coding.html'">
                     <h3>Creative Coding</h3>
                     <p>Generative art, procedural graphics, and algorithmic design</p>
                 </div>
             </div>
         </section>
 
-        <section class="about" id="about">
-            <h2>About</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <ul>
-                        <li>Certified by the <strong>Santa Fe Institute of Complex Science</strong>, with expertise in complex, adaptive systems.</li>
-                        <li>20+ years experience in designing, implementing & testing large-scale <strong>real-time complex systems</strong>, & automating company-wide processes. Extensive use of <strong>antifragile principles</strong> that deliver robust projects that improve under stress.</li>
-                        <li>Proven experience of combining <strong>TouchDesigner and Python</strong> to create immersive, interactive, and reliable experiences — from generative visuals to audio-reactive installations.</li>
-                        <li>Specialise in <strong>systems-thinking applied to creative tech</strong>, ensuring projects are visually compelling <em>and</em> technically robust.</li>
-                        <li>Experienced in hybrid roles bridging technical problem solving and experimental creative work, delivering installations, live visuals, and interactive media with precision.</li>
-                    </ul>
-                    <p class="tagline">
-                        <em>"Emergent. Robust. Antifragile"</em>
-                    </p>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="mailto:lorenzsys@protonmail.com">Email</a>
-                <a href="https://github.com/Milesy1" target="_blank">GitHub</a>
-                <a href="https://www.instagram.com/miles_waite_td" target="_blank">Instagram</a>
+                <a href="mailto:lorenzsys@protonmail.com" class="social-link" title="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/Milesy1" target="_blank" class="social-link" title="GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/miles_waite_td" target="_blank" class="social-link" title="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://bento.me/mileswaite" target="_blank" class="social-link" title="Bento">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                </a>
+                <a href="https://www.patreon.com/c/u39389547/collections" target="_blank" class="social-link" title="Patreon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 .48v23.04h4.22V.48zm15.385 0c-4.764 0-8.641 3.88-8.641 8.65 0 4.755 3.877 8.623 8.641 8.623 4.75 0 8.615-3.868 8.615-8.623C24 4.36 20.136.48 15.385.48z"/>
+                    </svg>
+                </a>
             </div>
             <div class="footer-bottom">
                 © 2025 Miles Waite. All Rights Reserved.
@@ -141,5 +168,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="tooltips.js"></script>
 </body>
 </html>

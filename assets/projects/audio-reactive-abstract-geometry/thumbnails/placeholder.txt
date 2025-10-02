@@ -1,0 +1,16 @@
+# Thumbnails Folder
+
+Place 300x200px thumbnail images here for:
+- Project card previews
+- Gallery displays
+- Social media sharing
+
+Recommended formats:
+- WebP (preferred)
+- PNG (with transparency)
+- JPG (for photos)
+
+Naming convention:
+- main-thumbnail.webp
+- demo-preview.png
+- showcase-image.jpg
