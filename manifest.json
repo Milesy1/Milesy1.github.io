@@ -1,7 +1,7 @@
 {
   "name": "Miles Waite - Complex Systems & Creative Technology",
   "short_name": "Miles Waite",
-  "description": "Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology.",
+  "description": "Portfolio of complex systems and creative technology expertise",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fafafa",
@@ -16,7 +16,13 @@
       "src": "favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "shortcuts": [
@@ -24,57 +30,27 @@
       "name": "Projects",
       "short_name": "Projects",
       "description": "View creative technology projects",
-      "url": "/#projects",
-      "icons": [
-        {
-          "src": "favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "url": "/#projects"
     },
     {
       "name": "Music",
       "short_name": "Music",
       "description": "Explore audio-reactive visuals and music",
-      "url": "/#music",
-      "icons": [
-        {
-          "src": "favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "url": "/#music"
     },
     {
       "name": "Code",
       "short_name": "Code",
       "description": "View technical projects and systems",
-      "url": "/#code",
-      "icons": [
-        {
-          "src": "favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "url": "/#code"
     },
     {
       "name": "About",
       "short_name": "About",
       "description": "Learn about Miles Waite",
-      "url": "/about.html",
-      "icons": [
-        {
-          "src": "favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "url": "/about.html"
     }
   ],
   "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  }
+  "prefer_related_applications": false
 }
