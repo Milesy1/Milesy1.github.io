@@ -50,7 +50,7 @@
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#music">Music</a></li>
                 <li><a href="index.html#code">Code</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -58,7 +58,7 @@
     <main>
         <section class="hero" style="margin: 0; padding: 0; position: relative; width: 100vw; height: 100vh;">
             <div class="hero-content" style="margin: 0; padding: 0;">
-                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1000;">Information</p>
+                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 999;">Information</p>
                 <p class="subtitle">Project</p>
                 <h1>API Text DAT</h1>
                 <p class="description">
@@ -67,55 +67,10 @@
             </div>
         </section>
 
-        <section class="project-details" style="opacity: 0; animation: slide-up-from-bottom 1.5s ease-out 2s forwards; margin-top: -60vh;">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2>Overview</h2>
-                    <p>This project demonstrates the power of real-time data visualization by connecting live API feeds to dynamic visual systems. Using TouchDesigner's Text DAT operators combined with custom Python scripts, the system fetches, processes, and visualizes streaming data from various sources including social media, weather, financial markets, and IoT sensors.</p>
-                    
-                    <h3>Technical Implementation</h3>
-                    <ul>
-                        <li><strong>API Integration:</strong> RESTful API connections with authentication and rate limiting</li>
-                        <li><strong>Data Processing:</strong> JSON parsing, text analysis, and data transformation</li>
-                        <li><strong>Real-time Updates:</strong> Asynchronous data fetching with error handling</li>
-                        <li><strong>Text Analysis:</strong> Natural language processing and sentiment analysis</li>
-                        <li><strong>Visual Mapping:</strong> Dynamic parameter mapping from data to visual elements</li>
-                    </ul>
+        <div style="position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: left; z-index: 500; margin-left: 150px;">
+            <h1 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #000; margin: 0;">API Text Dat</h1>
+        </div>
 
-                    <h3>Key Features</h3>
-                    <ul>
-                        <li>Multiple API source integration (Twitter, weather, stock prices, etc.)</li>
-                        <li>Real-time text processing and keyword extraction</li>
-                        <li>Adaptive visual responses based on data trends</li>
-                        <li>Historical data comparison and trend visualization</li>
-                        <li>Configurable data refresh rates and visualization parameters</li>
-                    </ul>
-
-                    <h3>Data Sources</h3>
-                    <ul>
-                        <li><strong>Social Media:</strong> Twitter API for real-time sentiment analysis</li>
-                        <li><strong>Weather Data:</strong> OpenWeatherMap for environmental visualization</li>
-                        <li><strong>Financial Markets:</strong> Stock price feeds for economic indicators</li>
-                        <li><strong>IoT Sensors:</strong> Custom sensor networks for environmental monitoring</li>
-                    </ul>
-
-                    <h3>Applications</h3>
-                    <p>This system has been used for data journalism projects, interactive installations that respond to current events, and educational demonstrations of data visualization principles. The modular design allows for easy adaptation to new data sources and visualization requirements.</p>
-                </div>
-
-                <div class="project-media">
-                    <div class="media-placeholder">
-                        <p>Media content will be loaded from assets/projects/api-text-dat/</p>
-                        <ul>
-                            <li>Videos: Real-time data visualization examples</li>
-                            <li>Images: Screenshots of different data visualizations</li>
-                            <li>Code: TouchDesigner networks and Python API scripts</li>
-                            <li>Documentation: API integration guides and setup instructions</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
 

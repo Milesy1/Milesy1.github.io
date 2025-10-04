@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Generative Max for Live Tools - Miles Waite</title>
-    <meta name="description" content="Custom Ableton Live devices for algorithmic music and visual generation" />
+    <meta name="description" content="Algorithmic composition tools and generative devices for Ableton Live" />
     
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#music">Music</a></li>
                 <li><a href="index.html#code">Code</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -58,64 +58,18 @@
     <main>
         <section class="hero" style="margin: 0; padding: 0; position: relative; width: 100vw; height: 100vh;">
             <div class="hero-content" style="margin: 0; padding: 0;">
-                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1000;">Information</p>
-                <p class="subtitle">Project</p>
+                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 999;">Information</p>
+                <p class="subtitle">Music</p>
                 <h1>Generative Max for Live Tools</h1>
                 <p class="description">
-                    Custom <span class="tooltip">Ableton Live<span class="tooltiptext">Digital audio workstation (DAW) used for music production, live performance, and creative audio applications. Known for its session view and real-time capabilities.</span></span> devices for <span class="tooltip">algorithmic music<span class="tooltiptext">Music created using algorithms, rules, or mathematical processes. Can be generative (creating new music) or assistive (helping with composition and arrangement).</span></span> and visual generation
+                    Algorithmic composition tools and generative devices for Ableton Live
                 </p>
             </div>
         </section>
 
-        <section class="project-details" style="opacity: 0; animation: slide-up-from-bottom 1.5s ease-out 2s forwards; margin-top: -60vh;">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2>Overview</h2>
-                    <p>This collection of Max for Live devices extends Ableton Live's capabilities with generative and algorithmic tools for music creation. Each device implements different approaches to procedural composition, from simple pattern generators to complex adaptive systems that evolve over time.</p>
-                    
-                    <h3>Device Collection</h3>
-                    <ul>
-                        <li><strong>Euclidean Sequencer:</strong> Generates rhythmic patterns using Euclidean algorithms</li>
-                        <li><strong>Markov Chain Composer:</strong> Creates melodic sequences based on probability matrices</li>
-                        <li><strong>Cellular Automata Drums:</strong> Drum pattern generation using Conway's Game of Life</li>
-                        <li><strong>L-System Melodies:</strong> Fractal melody generation using Lindenmayer systems</li>
-                        <li><strong>Chaos Oscillator:</strong> Non-linear dynamics for unpredictable musical variations</li>
-                    </ul>
-
-                    <h3>Technical Features</h3>
-                    <ul>
-                        <li>Real-time parameter control with MIDI mapping</li>
-                        <li>Integration with Ableton's session view and arrangement</li>
-                        <li>Customizable probability distributions and rule sets</li>
-                        <li>Visual feedback and pattern visualization</li>
-                        <li>Preset management and pattern saving</li>
-                    </ul>
-
-                    <h3>Musical Applications</h3>
-                    <ul>
-                        <li><strong>Live Performance:</strong> Real-time generative accompaniment</li>
-                        <li><strong>Composition:</strong> Seed material for further musical development</li>
-                        <li><strong>Sound Design:</strong> Algorithmic control of synthesis parameters</li>
-                        <li><strong>Education:</strong> Interactive exploration of mathematical music concepts</li>
-                    </ul>
-
-                    <h3>Integration with Visual Systems</h3>
-                    <p>These tools are designed to work seamlessly with TouchDesigner and other visual systems, providing synchronized generative content for audiovisual performances. MIDI and OSC output enables real-time communication with external visual software.</p>
-                </div>
-
-                <div class="project-media">
-                    <div class="media-placeholder">
-                        <p>Media content will be loaded from assets/projects/generative-max-for-live-tools/</p>
-                        <ul>
-                            <li>Audio: Generated musical examples</li>
-                            <li>Videos: Device demonstrations and tutorials</li>
-                            <li>Code: Max for Live device files (.amxd)</li>
-                            <li>Documentation: User guides and technical specifications</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div style="position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: left; z-index: 500; margin-left: 150px;">
+            <h1 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #000; margin: 0;">Generative Max for Live Tools</h1>
+        </div>
 
     </main>
 
@@ -159,6 +113,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="tooltips.js"></script>
 </body>
 </html>

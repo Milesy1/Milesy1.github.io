@@ -50,7 +50,7 @@
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#music">Music</a></li>
                 <li><a href="index.html#code">Code</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -58,7 +58,7 @@
     <main>
         <section class="hero" style="margin: 0; padding: 0; position: relative; width: 100vw; height: 100vh;">
             <div class="hero-content" style="margin: 0; padding: 0;">
-                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1000;">Information</p>
+                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 999;">Information</p>
                 <p class="subtitle">Project</p>
                 <h1>Particle Systems</h1>
                 <p class="description">
@@ -67,47 +67,10 @@
             </div>
         </section>
 
-        <section class="project-details" style="opacity: 0; animation: slide-up-from-bottom 1.5s ease-out 2s forwards; margin-top: -60vh;">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2>Overview</h2>
-                    <p>This project explores complex systems theory through the lens of particle simulation, creating emergent behaviors from simple rules. Using TouchDesigner and custom Python algorithms, thousands of particles interact according to physical and mathematical principles, generating unexpected and beautiful visual patterns.</p>
-                    
-                    <h3>Technical Implementation</h3>
-                    <ul>
-                        <li><strong>Physics Simulation:</strong> Custom force calculations for gravity, attraction, and repulsion</li>
-                        <li><strong>Flocking Algorithms:</strong> Implementation of boids behavior (separation, alignment, cohesion)</li>
-                        <li><strong>Spatial Optimization:</strong> Octree and spatial hashing for efficient neighbor detection</li>
-                        <li><strong>GPU Acceleration:</strong> Compute shaders for handling thousands of particles in real-time</li>
-                        <li><strong>Emergent Behaviors:</strong> Complex patterns arising from simple interaction rules</li>
-                    </ul>
+        <div style="position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: left; z-index: 500; margin-left: 150px;">
+            <h1 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #000; margin: 0;">Particle Systems</h1>
+        </div>
 
-                    <h3>Key Features</h3>
-                    <ul>
-                        <li>Multiple particle systems with different behavioral rules</li>
-                        <li>Real-time parameter adjustment for interactive exploration</li>
-                        <li>3D spatial navigation and camera controls</li>
-                        <li>Color coding based on velocity, density, and behavioral states</li>
-                        <li>Export capabilities for scientific visualization and artistic output</li>
-                    </ul>
-
-                    <h3>Applications</h3>
-                    <p>These particle systems serve both artistic and educational purposes, demonstrating complex systems principles while creating visually compelling content. They've been used in interactive installations, educational demonstrations, and as generative art pieces.</p>
-                </div>
-
-                <div class="project-media">
-                    <div class="media-placeholder">
-                        <p>Media content will be loaded from assets/projects/particle-systems/</p>
-                        <ul>
-                            <li>Videos: Particle behavior demonstrations</li>
-                            <li>Images: High-resolution captures of emergent patterns</li>
-                            <li>Code: TouchDesigner networks and Python scripts</li>
-                            <li>Documentation: Technical implementation details</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </main>
 

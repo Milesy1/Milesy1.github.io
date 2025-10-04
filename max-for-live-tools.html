@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Max for Live Tools - Miles Waite</title>
-    <meta name="description" content="Custom devices and patches for Ableton Live integration" />
+    <meta name="description" content="Custom Max for Live devices for Ableton Live music production and live performance" />
     
     <link rel="icon" href="favicon-32x32.png" type="image/png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#music">Music</a></li>
                 <li><a href="index.html#code">Code</a></li>
-                <li><a href="index.html#about">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
@@ -58,77 +58,18 @@
     <main>
         <section class="hero" style="margin: 0; padding: 0; position: relative; width: 100vw; height: 100vh;">
             <div class="hero-content" style="margin: 0; padding: 0;">
-                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 1000;">Information</p>
+                <p class="subtitle" style="opacity: 0; animation: fade-in-right 1s ease-out 0.5s forwards; position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 999;">Information</p>
                 <p class="subtitle">Music</p>
                 <h1>Max for Live Tools</h1>
                 <p class="description">
-                    Custom devices and patches for Ableton Live integration
+                    Custom Max for Live devices for Ableton Live music production and live performance
                 </p>
             </div>
         </section>
 
-        <section class="project-details" style="opacity: 0; animation: slide-up-from-bottom 1.5s ease-out 2s forwards; margin-top: -60vh;">
-            <div class="project-content">
-                <div class="project-info">
-                    <h2>Overview</h2>
-                    <p>This collection of Max for Live devices extends Ableton Live's functionality with custom tools designed for creative music production, live performance, and sound design. Each device addresses specific workflow needs and creative possibilities that aren't available in standard DAW environments.</p>
-                    
-                    <h3>Device Categories</h3>
-                    <ul>
-                        <li><strong>Audio Effects:</strong> Custom processing and creative sound manipulation</li>
-                        <li><strong>MIDI Effects:</strong> Advanced MIDI processing and transformation</li>
-                        <li><strong>Instruments:</strong> Unique synthesizers and sample-based instruments</li>
-                        <li><strong>Utility Tools:</strong> Workflow enhancement and automation devices</li>
-                        <li><strong>Visual Feedback:</strong> Real-time analysis and visualization tools</li>
-                    </ul>
-
-                    <h3>Featured Devices</h3>
-                    <ul>
-                        <li><strong>Spectral Freeze:</strong> Real-time spectral analysis and freezing</li>
-                        <li><strong>Polyrhythm Generator:</strong> Complex rhythmic pattern creation</li>
-                        <li><strong>Harmonic Analyzer:</strong> Real-time chord detection and visualization</li>
-                        <li><strong>Granular Delay:</strong> Granular synthesis-based delay effect</li>
-                        <li><strong>MIDI Probability:</strong> Probabilistic MIDI note generation</li>
-                    </ul>
-
-                    <h3>Technical Features</h3>
-                    <ul>
-                        <li>Seamless integration with Ableton Live's interface</li>
-                        <li>Real-time parameter automation and MIDI mapping</li>
-                        <li>Preset management and device chaining capabilities</li>
-                        <li>Low-latency processing for live performance</li>
-                        <li>Visual feedback and parameter visualization</li>
-                    </ul>
-
-                    <h3>Creative Applications</h3>
-                    <ul>
-                        <li><strong>Studio Production:</strong> Enhanced creative tools for composition</li>
-                        <li><strong>Live Performance:</strong> Real-time sound manipulation and control</li>
-                        <li><strong>Sound Design:</strong> Unique processing for film and game audio</li>
-                        <li><strong>Education:</strong> Interactive tools for music theory and analysis</li>
-                        <li><strong>Experimentation:</strong> Platforms for exploring new musical ideas</li>
-                    </ul>
-
-                    <h3>Integration with Visual Systems</h3>
-                    <p>Many of these devices are designed to work in conjunction with TouchDesigner and other visual systems, providing synchronized control data for audiovisual performances. OSC and MIDI output enables seamless communication between audio and visual domains.</p>
-
-                    <h3>Development Philosophy</h3>
-                    <p>Each device is built with a focus on musical utility, creative inspiration, and technical reliability. The interfaces are designed to be intuitive while providing deep parameter control for advanced users. All devices undergo extensive testing in live performance contexts to ensure stability and usability.</p>
-                </div>
-
-                <div class="project-media">
-                    <div class="media-placeholder">
-                        <p>Media content will be loaded from assets/music/max-for-live-tools/</p>
-                        <ul>
-                            <li>Audio: Device demonstrations and musical examples</li>
-                            <li>Videos: Tutorial videos and performance footage</li>
-                            <li>Code: Max for Live device files (.amxd) and source patches</li>
-                            <li>Documentation: User manuals and technical specifications</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div style="position: fixed; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: left; z-index: 500; margin-left: 150px;">
+            <h1 style="font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.2rem; color: #000; margin: 0;">Max for Live Tools</h1>
+        </div>
 
     </main>
 
@@ -172,6 +113,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="tooltips.js"></script>
 </body>
 </html>
