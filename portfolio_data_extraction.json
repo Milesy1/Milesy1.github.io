@@ -1,0 +1,442 @@
+{
+  "extraction_metadata": {
+    "timestamp": "2025-01-27T12:00:00Z",
+    "source": "mileswaite.net portfolio website",
+    "extractor": "AI Assistant",
+    "version": "1.0.0"
+  },
+  "site_overview": {
+    "domain": "mileswaite.net",
+    "title": "Miles Waite - Complex Systems & Creative Technology",
+    "description": "Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology.",
+    "tagline": "Emergent. Robust. Antifragile",
+    "theme": "Creative Technology & Complex Systems",
+    "deployment": "Vercel with PWA support"
+  },
+  "personal_profile": {
+    "name": "Miles Waite",
+    "email": "lorenzsys@protonmail.com",
+    "certification": "Santa Fe Institute of Complex Science",
+    "experience": "20+ years",
+    "specializations": [
+      "Complex adaptive systems",
+      "Real-time complex systems",
+      "TouchDesigner",
+      "Python",
+      "Creative technology",
+      "Systems architecture",
+      "Antifragile design principles"
+    ],
+    "social_links": {
+      "github": "https://milesy1-github-io.vercel.app",
+      "instagram": "https://www.instagram.com/miles_waite_td",
+      "vercel": "https://vercel.com/miles-projects-a6445319",
+      "bento": "https://bento.me/mileswaite",
+      "patreon": "https://www.patreon.com/c/u39389547/collections"
+    }
+  },
+  "content_structure": {
+    "main_sections": [
+      {
+        "id": "projects",
+        "title": "Projects",
+        "description": "Showcasing creative technology projects and implementations",
+        "projects": [
+          {
+            "title": "Audio Reactive Abstract Geometry",
+            "description": "Real-time geometric visualizations that respond dynamically to audio input using TouchDesigner and Python",
+            "url": "audio-reactive-abstract-geometry.html",
+            "technologies": ["TouchDesigner", "Python", "Audio Analysis", "Real-time Rendering"]
+          },
+          {
+            "title": "Particle Systems",
+            "description": "Complex particle behaviors and emergent visual patterns in 3D space",
+            "url": "particle-systems.html",
+            "technologies": ["3D Graphics", "Particle Systems", "Emergent Patterns"]
+          },
+          {
+            "title": "API Text DAT",
+            "description": "Data-driven visualizations using real-time API feeds and text processing",
+            "url": "api-text-dat.html",
+            "technologies": ["API Integration", "Data Visualization", "Text Processing"]
+          },
+          {
+            "title": "Generative Max for Live Tools",
+            "description": "Custom Ableton Live devices for algorithmic music and visual generation",
+            "url": "generative-max-for-live-tools.html",
+            "technologies": ["Max for Live", "Ableton Live", "Algorithmic Music", "Generative Art"]
+          }
+        ]
+      },
+      {
+        "id": "music",
+        "title": "Music",
+        "description": "Audio-reactive visuals and music technology projects",
+        "projects": [
+          {
+            "title": "Audio Reactive Visuals",
+            "description": "Real-time generative visuals that respond to audio input using TouchDesigner and Python",
+            "url": "audio-reactive-visuals.html",
+            "technologies": ["TouchDesigner", "Python", "Audio Analysis", "Real-time Graphics"]
+          },
+          {
+            "title": "Live Performance",
+            "description": "Interactive installations and live visual performances for events and exhibitions",
+            "url": "live-performance.html",
+            "technologies": ["Live Performance", "Interactive Installations", "Real-time Systems"]
+          },
+          {
+            "title": "Generative Music",
+            "description": "Algorithmic composition and procedural music generation systems",
+            "url": "generative-music.html",
+            "technologies": ["Algorithmic Composition", "Procedural Generation", "Music Technology"]
+          },
+          {
+            "title": "Max for Live Tools",
+            "description": "Custom devices and patches for Ableton Live integration",
+            "url": "max-for-live-tools.html",
+            "technologies": ["Max for Live", "Ableton Live", "Custom Devices", "Music Production"]
+          }
+        ]
+      },
+      {
+        "id": "code",
+        "title": "Code",
+        "description": "Technical projects and systems architecture",
+        "projects": [
+          {
+            "title": "TouchDesigner",
+            "description": "Complex visual systems, real-time rendering, and interactive installations",
+            "url": "touchdesigner.html",
+            "technologies": ["TouchDesigner", "Real-time Rendering", "Interactive Systems", "Visual Programming"]
+          },
+          {
+            "title": "Python",
+            "description": "Data processing, API integration, and automation for creative projects",
+            "url": "python.html",
+            "technologies": ["Python", "Data Processing", "API Integration", "Automation"]
+          },
+          {
+            "title": "Systems Architecture",
+            "description": "Large-scale real-time systems with antifragile design principles",
+            "url": "systems-architecture.html",
+            "technologies": ["Systems Architecture", "Antifragile Design", "Real-time Systems", "Complex Systems"]
+          },
+          {
+            "title": "Creative Coding",
+            "description": "Generative art, procedural graphics, and algorithmic design",
+            "url": "creative-coding.html",
+            "technologies": ["Generative Art", "Procedural Graphics", "Algorithmic Design", "Creative Coding"]
+          }
+        ]
+      }
+    ]
+  },
+  "technical_details": {
+    "touchdesigner": {
+      "overview": "TouchDesigner serves as the primary platform for creating complex real-time visual systems and interactive installations. This collection showcases advanced techniques in node-based visual programming, combining procedural generation, real-time rendering, and interactive control systems to create compelling audiovisual experiences.",
+      "core_competencies": [
+        "Real-time Rendering: High-performance GPU-accelerated graphics",
+        "Procedural Generation: Algorithmic content creation and animation",
+        "Interactive Systems: Sensor integration and responsive environments",
+        "Audio Analysis: Real-time audio processing and visualization",
+        "Network Integration: OSC, MIDI, and custom protocol implementation"
+      ],
+      "technical_specializations": [
+        "Custom GLSL shader development for unique visual effects",
+        "Python integration for advanced data processing and automation",
+        "Multi-display and projection mapping systems",
+        "Real-time particle systems and fluid dynamics",
+        "Computer vision and motion tracking integration"
+      ],
+      "project_categories": [
+        "Live Performance: VJ systems and concert visuals",
+        "Interactive Installations: Museum and gallery experiences",
+        "Generative Art: Autonomous visual systems",
+        "Data Visualization: Real-time information graphics",
+        "Architectural Projection: Building-scale visual mapping"
+      ],
+      "advanced_techniques": [
+        "Multi-threaded processing for complex computational tasks",
+        "Custom operator development using C++ and Python",
+        "Machine learning integration for adaptive systems",
+        "Real-time video processing and effects",
+        "Synchronized multi-machine installations"
+      ]
+    },
+    "python": {
+      "overview": "Python serves as the backbone for data processing, automation, and system integration across creative technology projects. This collection demonstrates advanced Python applications in audio analysis, API integration, machine learning, and creative automation, all designed to enhance and extend creative workflows.",
+      "core_applications": [
+        "Audio Analysis: Real-time FFT, beat detection, and spectral analysis",
+        "Data Processing: Large-scale data manipulation and transformation",
+        "API Integration: RESTful services and real-time data feeds",
+        "Machine Learning: Generative models and pattern recognition",
+        "Automation: Workflow optimization and process automation"
+      ],
+      "technical_specializations": [
+        "NumPy and SciPy for scientific computing and signal processing",
+        "OpenCV for computer vision and image processing",
+        "TensorFlow/PyTorch for machine learning applications",
+        "Flask/FastAPI for web services and API development",
+        "OSC and MIDI libraries for creative technology integration"
+      ],
+      "creative_technology_integration": [
+        "TouchDesigner Extensions: Custom Python operators and modules",
+        "Max/MSP Integration: External objects and data processing",
+        "Ableton Live Scripts: Custom MIDI controllers and automation",
+        "Hardware Control: Arduino, Raspberry Pi, and sensor integration",
+        "Network Protocols: OSC, WebSocket, and custom communication systems"
+      ],
+      "project_categories": [
+        "Audio Processing: Real-time analysis and feature extraction",
+        "Data Visualization: Dynamic graphics and interactive displays",
+        "Generative Systems: Algorithmic content creation",
+        "System Integration: Multi-platform communication and control",
+        "Performance Tools: Live performance enhancement and automation"
+      ],
+      "advanced_techniques": [
+        "Asynchronous programming for real-time applications",
+        "Multi-threading and parallel processing optimization",
+        "Custom protocol development for specialized hardware",
+        "Machine learning model deployment and optimization",
+        "Cross-platform compatibility and deployment strategies"
+      ]
+    },
+    "systems_architecture": {
+      "overview": "This portfolio demonstrates expertise in designing and implementing large-scale real-time systems that not only survive stress and uncertainty but actually improve under challenging conditions. Drawing from complex systems theory and 20+ years of experience, these architectures embody antifragile principles that ensure robust, adaptive, and emergent system behaviors.",
+      "antifragile_design_principles": [
+        "Redundancy: Multiple pathways and backup systems that activate under stress",
+        "Optionality: Systems that benefit from volatility and uncertainty",
+        "Overcompensation: Adaptive responses that exceed recovery requirements",
+        "Hormesis: Small stresses that strengthen system resilience",
+        "Via Negativa: Removing fragilities rather than adding complexities"
+      ],
+      "system_characteristics": [
+        "Real-time processing with sub-millisecond latency requirements",
+        "Distributed architecture with autonomous node operation",
+        "Self-healing capabilities and automatic failure recovery",
+        "Adaptive load balancing and resource optimization",
+        "Emergent behaviors from simple interaction rules"
+      ],
+      "technical_implementation": [
+        "Microservices Architecture: Loosely coupled, independently deployable services",
+        "Event-Driven Design: Asynchronous communication and reactive patterns",
+        "Circuit Breakers: Automatic failure detection and isolation",
+        "Chaos Engineering: Intentional stress testing and failure injection",
+        "Observability: Comprehensive monitoring and adaptive alerting"
+      ],
+      "application_domains": [
+        "Creative Technology: Live performance and interactive installation systems",
+        "Financial Systems: High-frequency trading and risk management",
+        "IoT Networks: Sensor networks and edge computing architectures",
+        "Media Processing: Real-time video and audio processing pipelines",
+        "Automation Systems: Company-wide process automation and optimization"
+      ],
+      "performance_metrics": [
+        "99.99% uptime with graceful degradation under stress",
+        "Sub-millisecond response times for critical operations",
+        "Automatic scaling from single instances to thousands of nodes",
+        "Zero-downtime deployments and updates",
+        "Self-optimization based on usage patterns and load"
+      ]
+    },
+    "creative_coding": {
+      "overview": "Creative coding represents the intersection of artistic expression and computational thinking, where algorithms become brushes and code becomes canvas. This collection explores generative art, procedural graphics, and algorithmic design across multiple platforms and programming languages, creating unique visual experiences that emerge from mathematical and computational processes.",
+      "creative_platforms": [
+        "Processing/p5.js: Interactive graphics and generative art",
+        "TouchDesigner: Real-time visual systems and installations",
+        "OpenFrameworks: C++ creative applications and performance tools",
+        "Python: Data-driven art and algorithmic composition",
+        "GLSL Shaders: GPU-accelerated visual effects and generative graphics"
+      ],
+      "algorithmic_approaches": [
+        "Fractal geometry and L-system generation",
+        "Cellular automata and emergent pattern creation",
+        "Perlin noise and organic texture generation",
+        "Physics simulation and particle systems",
+        "Machine learning and neural network art"
+      ],
+      "visual_techniques": [
+        "Procedural Generation: Rule-based content creation",
+        "Data Visualization: Transforming data into visual narratives",
+        "Interactive Systems: User-responsive and adaptive graphics",
+        "Generative Animation: Time-based algorithmic motion",
+        "Parametric Design: Variable-driven visual exploration"
+      ],
+      "mathematical_foundations": [
+        "Complex number mathematics for fractal generation",
+        "Trigonometric functions for organic motion patterns",
+        "Linear algebra for 3D transformations and projections",
+        "Probability theory for stochastic art generation",
+        "Differential equations for natural phenomenon simulation"
+      ],
+      "project_categories": [
+        "Generative Art: Autonomous artistic creation systems",
+        "Interactive Installations: Responsive environmental art",
+        "Data Art: Visualization of complex datasets",
+        "Algorithmic Animation: Procedural motion graphics",
+        "Experimental Interfaces: Novel interaction paradigms"
+      ]
+    }
+  },
+  "technologies_used": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "P5.js",
+      "Progressive Web App (PWA)",
+      "Service Workers",
+      "Web App Manifest"
+    ],
+    "creative_technology": [
+      "TouchDesigner",
+      "Python",
+      "Max for Live",
+      "Ableton Live",
+      "OpenFrameworks",
+      "Processing",
+      "GLSL Shaders"
+    ],
+    "data_processing": [
+      "NumPy",
+      "SciPy",
+      "OpenCV",
+      "TensorFlow",
+      "PyTorch",
+      "FFT Analysis",
+      "Audio Processing"
+    ],
+    "system_integration": [
+      "OSC (Open Sound Control)",
+      "MIDI",
+      "WebSocket",
+      "RESTful APIs",
+      "Microservices",
+      "Event-Driven Architecture",
+      "Circuit Breakers"
+    ],
+    "deployment": [
+      "Vercel",
+      "GitHub",
+      "Progressive Web App",
+      "Service Workers",
+      "Offline Functionality",
+      "Caching Strategies"
+    ]
+  },
+  "design_principles": {
+    "antifragile_concepts": [
+      "Systems that improve under stress",
+      "Redundancy and optionality",
+      "Via negativa approach",
+      "Hormesis and small stresses",
+      "Emergent behaviors"
+    ],
+    "complex_systems_theory": [
+      "Self-organization",
+      "Adaptation",
+      "Non-linear dynamics",
+      "Emergence",
+      "Santa Fe Institute principles"
+    ],
+    "creative_technology_philosophy": [
+      "Systems-thinking applied to creative tech",
+      "Real-time performance optimization",
+      "Interdisciplinary integration",
+      "Technical robustness with visual appeal",
+      "Experimental and innovative approaches"
+    ]
+  },
+  "project_structure": {
+    "asset_organization": {
+      "code": {
+        "creative-coding": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "python": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "systems-architecture": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "touchdesigner": ["audio", "code", "docs", "images", "thumbnails", "videos"]
+      },
+      "music": {
+        "audio-reactive-visuals": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "generative-music": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "live-performance": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "max-for-live-tools": ["audio", "code", "docs", "images", "thumbnails", "videos"]
+      },
+      "projects": {
+        "api-text-dat": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "audio-reactive-abstract-geometry": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "generative-max-for-live-tools": ["audio", "code", "docs", "images", "thumbnails", "videos"],
+        "particle-systems": ["audio", "code", "docs", "images", "thumbnails", "videos"]
+      }
+    }
+  },
+  "pwa_features": {
+    "manifest": {
+      "name": "Miles Waite - Complex Systems & Creative Technology",
+      "short_name": "Miles Waite",
+      "description": "Portfolio of complex systems and creative technology expertise",
+      "display": "standalone",
+      "theme_color": "#6366f1",
+      "background_color": "#fafafa"
+    },
+    "service_worker": {
+      "cache_strategy": "Static and dynamic caching",
+      "offline_support": "Custom offline page",
+      "update_management": "Automatic updates with notifications",
+      "background_sync": "Form submissions and data sync"
+    },
+    "features": [
+      "Installable app",
+      "Offline functionality",
+      "Performance optimization",
+      "App-like experience",
+      "Update management"
+    ]
+  },
+  "content_analysis": {
+    "writing_style": {
+      "tone": "Professional, technical, confident",
+      "voice": "Expert practitioner with deep technical knowledge",
+      "terminology": "Specialized technical terms with clear explanations",
+      "structure": "Well-organized with clear hierarchies"
+    },
+    "key_themes": [
+      "Complex systems and antifragility",
+      "Real-time performance and optimization",
+      "Creative technology integration",
+      "Interdisciplinary approach",
+      "Technical excellence with artistic vision"
+    ],
+    "target_audience": [
+      "Creative technology professionals",
+      "Complex systems researchers",
+      "Technical decision makers",
+      "Creative directors",
+      "Innovation teams"
+    ]
+  },
+  "seo_metadata": {
+    "primary_keywords": [
+      "complex systems",
+      "TouchDesigner",
+      "Python",
+      "creative technology",
+      "real-time systems",
+      "Santa Fe Institute",
+      "generative art",
+      "audio reactive",
+      "interactive installations",
+      "antifragile design"
+    ],
+    "meta_descriptions": {
+      "homepage": "Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology.",
+      "about": "About Miles Waite - Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology."
+    },
+    "open_graph": {
+      "type": "website",
+      "title": "Miles Waite - Complex Systems & Creative Technology",
+      "description": "Certified by the Santa Fe Institute of Complex Science. 20+ years experience in real-time complex systems, TouchDesigner, Python, and creative technology.",
+      "image": "https://mileswaite.net/favicon-32x32.png"
+    }
+  }
+}

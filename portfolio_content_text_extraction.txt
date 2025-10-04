@@ -1,0 +1,347 @@
+MILES WAITE PORTFOLIO - COMPLETE TEXT CONTENT EXTRACTION
+============================================================
+
+PERSONAL PROFILE & CREDENTIALS
+------------------------------
+Name: Miles Waite
+Email: lorenzsys@protonmail.com
+Certification: Santa Fe Institute of Complex Science
+Experience: 20+ years
+Domain: mileswaite.net
+
+Tagline: Emergent. Robust. Antifragile
+Theme: Creative Technology & Complex Systems
+
+About Section Content:
+- Certified by the Santa Fe Institute of Complex Science, with expertise in complex, adaptive systems.
+- 20+ years experience in designing, implementing & testing large-scale real-time complex systems, & automating company-wide processes.
+- Proven experience of combining TouchDesigner and Python to create immersive, interactive, and reliable experiences.
+- Specialise in systems-thinking applied to creative tech, ensuring projects are visually compelling and technically robust.
+- Experienced in hybrid roles bridging technical problem solving and experimental creative work.
+
+MAIN PORTFOLIO SECTIONS
+-----------------------
+
+PROJECTS SECTION:
+-----------------
+
+Audio Reactive Abstract Geometry:
+Real-time geometric visualizations that respond dynamically to audio input using TouchDesigner and Python
+
+Particle Systems:
+Complex particle behaviors and emergent visual patterns in 3D space
+
+API Text DAT:
+Data-driven visualizations using real-time API feeds and text processing
+
+Generative Max for Live Tools:
+Custom Ableton Live devices for algorithmic music and visual generation
+
+MUSIC SECTION:
+--------------
+
+Audio Reactive Visuals:
+Real-time generative visuals that respond to audio input using TouchDesigner and Python
+
+Live Performance:
+Interactive installations and live visual performances for events and exhibitions
+
+Generative Music:
+Algorithmic composition and procedural music generation systems
+
+Max for Live Tools:
+Custom devices and patches for Ableton Live integration
+
+CODE SECTION:
+-------------
+
+TouchDesigner:
+Complex visual systems, real-time rendering, and interactive installations
+
+Python:
+Data processing, API integration, and automation for creative projects
+
+Systems Architecture:
+Large-scale real-time systems with antifragile design principles
+
+Creative Coding:
+Generative art, procedural graphics, and algorithmic design
+
+DETAILED TECHNICAL CONTENT
+---------------------------
+
+TOUCHDESIGNER EXPERTISE:
+------------------------
+TouchDesigner serves as the primary platform for creating complex real-time visual systems and interactive installations. This collection showcases advanced techniques in node-based visual programming, combining procedural generation, real-time rendering, and interactive control systems to create compelling audiovisual experiences.
+
+Core Competencies:
+- Real-time Rendering: High-performance GPU-accelerated graphics
+- Procedural Generation: Algorithmic content creation and animation
+- Interactive Systems: Sensor integration and responsive environments
+- Audio Analysis: Real-time audio processing and visualization
+- Network Integration: OSC, MIDI, and custom protocol implementation
+
+Technical Specializations:
+- Custom GLSL shader development for unique visual effects
+- Python integration for advanced data processing and automation
+- Multi-display and projection mapping systems
+- Real-time particle systems and fluid dynamics
+- Computer vision and motion tracking integration
+
+Project Categories:
+- Live Performance: VJ systems and concert visuals
+- Interactive Installations: Museum and gallery experiences
+- Generative Art: Autonomous visual systems
+- Data Visualization: Real-time information graphics
+- Architectural Projection: Building-scale visual mapping
+
+Advanced Techniques:
+- Multi-threaded processing for complex computational tasks
+- Custom operator development using C++ and Python
+- Machine learning integration for adaptive systems
+- Real-time video processing and effects
+- Synchronized multi-machine installations
+
+Integration Capabilities:
+TouchDesigner projects are designed to integrate seamlessly with other creative tools and platforms. This includes bidirectional communication with Ableton Live, Max/MSP, Unity, and custom hardware systems. The modular approach ensures scalability and adaptability across different performance contexts.
+
+Performance Optimization:
+All TouchDesigner systems are built with performance optimization as a core principle. This includes efficient memory management, GPU utilization optimization, and frame rate consistency for mission-critical live performance applications.
+
+PYTHON EXPERTISE:
+-----------------
+Python serves as the backbone for data processing, automation, and system integration across creative technology projects. This collection demonstrates advanced Python applications in audio analysis, API integration, machine learning, and creative automation, all designed to enhance and extend creative workflows.
+
+Core Applications:
+- Audio Analysis: Real-time FFT, beat detection, and spectral analysis
+- Data Processing: Large-scale data manipulation and transformation
+- API Integration: RESTful services and real-time data feeds
+- Machine Learning: Generative models and pattern recognition
+- Automation: Workflow optimization and process automation
+
+Technical Specializations:
+- NumPy and SciPy for scientific computing and signal processing
+- OpenCV for computer vision and image processing
+- TensorFlow/PyTorch for machine learning applications
+- Flask/FastAPI for web services and API development
+- OSC and MIDI libraries for creative technology integration
+
+Creative Technology Integration:
+- TouchDesigner Extensions: Custom Python operators and modules
+- Max/MSP Integration: External objects and data processing
+- Ableton Live Scripts: Custom MIDI controllers and automation
+- Hardware Control: Arduino, Raspberry Pi, and sensor integration
+- Network Protocols: OSC, WebSocket, and custom communication systems
+
+Project Categories:
+- Audio Processing: Real-time analysis and feature extraction
+- Data Visualization: Dynamic graphics and interactive displays
+- Generative Systems: Algorithmic content creation
+- System Integration: Multi-platform communication and control
+- Performance Tools: Live performance enhancement and automation
+
+Advanced Techniques:
+- Asynchronous programming for real-time applications
+- Multi-threading and parallel processing optimization
+- Custom protocol development for specialized hardware
+- Machine learning model deployment and optimization
+- Cross-platform compatibility and deployment strategies
+
+Performance Optimization:
+All Python applications are optimized for real-time performance in creative contexts. This includes efficient memory management, vectorized operations using NumPy, and careful attention to latency requirements for live performance applications.
+
+Open Source Contributions:
+Many Python tools and libraries developed for creative projects are released as open source, contributing to the broader creative technology community. These include TouchDesigner extensions, audio analysis libraries, and automation tools.
+
+SYSTEMS ARCHITECTURE EXPERTISE:
+-------------------------------
+This portfolio demonstrates expertise in designing and implementing large-scale real-time systems that not only survive stress and uncertainty but actually improve under challenging conditions. Drawing from complex systems theory and 20+ years of experience, these architectures embody antifragile principles that ensure robust, adaptive, and emergent system behaviors.
+
+Antifragile Design Principles:
+- Redundancy: Multiple pathways and backup systems that activate under stress
+- Optionality: Systems that benefit from volatility and uncertainty
+- Overcompensation: Adaptive responses that exceed recovery requirements
+- Hormesis: Small stresses that strengthen system resilience
+- Via Negativa: Removing fragilities rather than adding complexities
+
+System Characteristics:
+- Real-time processing with sub-millisecond latency requirements
+- Distributed architecture with autonomous node operation
+- Self-healing capabilities and automatic failure recovery
+- Adaptive load balancing and resource optimization
+- Emergent behaviors from simple interaction rules
+
+Technical Implementation:
+- Microservices Architecture: Loosely coupled, independently deployable services
+- Event-Driven Design: Asynchronous communication and reactive patterns
+- Circuit Breakers: Automatic failure detection and isolation
+- Chaos Engineering: Intentional stress testing and failure injection
+- Observability: Comprehensive monitoring and adaptive alerting
+
+Application Domains:
+- Creative Technology: Live performance and interactive installation systems
+- Financial Systems: High-frequency trading and risk management
+- IoT Networks: Sensor networks and edge computing architectures
+- Media Processing: Real-time video and audio processing pipelines
+- Automation Systems: Company-wide process automation and optimization
+
+Complex Systems Integration:
+Systems are designed with deep understanding of complex adaptive systems, incorporating principles from the Santa Fe Institute's research. This includes emergence, self-organization, adaptation, and non-linear dynamics that create robust and innovative solutions.
+
+Performance Metrics:
+- 99.99% uptime with graceful degradation under stress
+- Sub-millisecond response times for critical operations
+- Automatic scaling from single instances to thousands of nodes
+- Zero-downtime deployments and updates
+- Self-optimization based on usage patterns and load
+
+Continuous Evolution:
+All systems are designed for continuous evolution and improvement. They incorporate feedback loops, learning mechanisms, and adaptive algorithms that allow them to become more capable over time, embodying the core principles of antifragility.
+
+CREATIVE CODING EXPERTISE:
+--------------------------
+Creative coding represents the intersection of artistic expression and computational thinking, where algorithms become brushes and code becomes canvas. This collection explores generative art, procedural graphics, and algorithmic design across multiple platforms and programming languages, creating unique visual experiences that emerge from mathematical and computational processes.
+
+Creative Platforms:
+- Processing/p5.js: Interactive graphics and generative art
+- TouchDesigner: Real-time visual systems and installations
+- OpenFrameworks: C++ creative applications and performance tools
+- Python: Data-driven art and algorithmic composition
+- GLSL Shaders: GPU-accelerated visual effects and generative graphics
+
+Algorithmic Approaches:
+- Fractal geometry and L-system generation
+- Cellular automata and emergent pattern creation
+- Perlin noise and organic texture generation
+- Physics simulation and particle systems
+- Machine learning and neural network art
+
+Visual Techniques:
+- Procedural Generation: Rule-based content creation
+- Data Visualization: Transforming data into visual narratives
+- Interactive Systems: User-responsive and adaptive graphics
+- Generative Animation: Time-based algorithmic motion
+- Parametric Design: Variable-driven visual exploration
+
+Mathematical Foundations:
+- Complex number mathematics for fractal generation
+- Trigonometric functions for organic motion patterns
+- Linear algebra for 3D transformations and projections
+- Probability theory for stochastic art generation
+- Differential equations for natural phenomenon simulation
+
+Project Categories:
+- Generative Art: Autonomous artistic creation systems
+- Interactive Installations: Responsive environmental art
+- Data Art: Visualization of complex datasets
+- Algorithmic Animation: Procedural motion graphics
+- Experimental Interfaces: Novel interaction paradigms
+
+Technical Innovation:
+Projects push the boundaries of what's possible with creative coding, exploring new algorithms, novel interaction methods, and innovative visual techniques. Each project serves as both artistic expression and technical research, contributing to the broader creative coding community.
+
+Cross-Platform Integration:
+Creative coding projects are designed to integrate with other creative tools and platforms, enabling seamless workflows between different software environments and hardware systems. This includes real-time communication with audio software, sensor integration, and web-based interactive experiences.
+
+PROJECT-SPECIFIC CONTENT:
+-------------------------
+
+Audio Reactive Abstract Geometry Project:
+This project creates abstract geometric visualizations that respond in real-time to audio input, creating immersive visual experiences that bridge sound and sight.
+
+Technical Stack:
+- TouchDesigner: Real-time visual processing and rendering
+- Python: Audio analysis and data processing
+- Audio Analysis: FFT, frequency analysis, and beat detection
+- 3D Graphics: OpenGL rendering and shader programming
+
+Features:
+- Real-time audio analysis
+- Dynamic geometric transformations
+- Responsive visual feedback
+- Multiple visualization modes
+- Customizable parameters
+
+Usage:
+1. Load the TouchDesigner project
+2. Connect audio input
+3. Adjust visualization parameters
+4. Record or stream output
+
+Development Requirements:
+- TouchDesigner 2023.20000+
+- Python 3.9+
+- Audio interface (ASIO recommended)
+
+Notes:
+- Optimized for real-time performance
+- Supports multiple audio formats
+- Configurable visualization parameters
+- Export capabilities for video/streaming
+
+TECHNICAL TERMINOLOGY & CONCEPTS:
+---------------------------------
+
+Complex Systems Terms:
+- Antifragile: Systems that benefit from stress and volatility
+- Emergence: Properties that arise from system interactions
+- Self-organization: Systems organizing without external control
+- Non-linear dynamics: Complex, unpredictable system behaviors
+- Adaptive systems: Systems that change based on experience
+
+Technical Terms:
+- Real-time rendering: Immediate visual output generation
+- GPU-accelerated: Using graphics processors for computation
+- Procedural generation: Algorithm-based content creation
+- FFT: Fast Fourier Transform for frequency analysis
+- OSC: Open Sound Control protocol for communication
+- MIDI: Musical Instrument Digital Interface
+- GLSL: Graphics Language Shader Language
+- API integration: Connecting different software systems
+- Microservices: Modular, independent service architecture
+- Circuit breakers: Automatic failure detection systems
+
+Creative Technology Terms:
+- VJ systems: Video jockey performance systems
+- Projection mapping: 3D surface projection techniques
+- Interactive installations: User-responsive art systems
+- Generative art: Algorithm-created artistic content
+- Data visualization: Converting data to visual forms
+- Parametric design: Variable-driven design approaches
+- Cellular automata: Rule-based pattern generation
+- Perlin noise: Organic-looking random generation
+
+SOCIAL MEDIA & PROFESSIONAL LINKS:
+----------------------------------
+GitHub: https://milesy1-github-io.vercel.app
+Instagram: https://www.instagram.com/miles_waite_td
+Vercel: https://vercel.com/miles-projects-a6445319
+Bento: https://bento.me/mileswaite
+Patreon: https://www.patreon.com/c/u39389547/collections
+
+PWA (Progressive Web App) Features:
+- Installable app functionality
+- Offline capabilities
+- Service worker implementation
+- App manifest configuration
+- Performance optimization
+- Update management
+- Background sync capabilities
+
+PORTFOLIO STRUCTURE & ORGANIZATION:
+-----------------------------------
+The portfolio is organized into three main sections:
+1. Projects: Creative technology implementations
+2. Music: Audio-reactive and music technology work
+3. Code: Technical systems and programming expertise
+
+Each section contains detailed project descriptions, technical specifications, and implementation details. The site uses a clean, professional design with smooth animations and responsive layout optimized for all devices.
+
+The portfolio demonstrates expertise across multiple domains:
+- Complex systems theory and implementation
+- Creative technology and interactive media
+- Real-time systems and performance optimization
+- Cross-platform integration and automation
+- Antifragile design principles and practices
+
+This comprehensive portfolio showcases a unique combination of technical expertise, creative vision, and systems thinking applied to innovative projects across creative technology, complex systems, and real-time performance domains.
